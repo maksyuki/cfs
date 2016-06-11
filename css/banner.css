@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#banner {
+    width: 100%;
+    height: 666px;
+    position: relative;
+}
+
+#banner .banner_picture {
+    width: 100%;
+    height: 100%;
+    background: #383a39 no-repeat center;
+    position: absolute;
+    opacity: 0;
+    z-index: 0;
+    transition: opacity 1s;
+}
+
+#banner .left, #banner .right {
+    width: 18px;
+    height: 32px;
+    top: 50%;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    transition: all 0.5s;
+}
+
+#banner .left {
+    left: 80px;
+}
+
+#banner .right {
+    right: 80px;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+
+#banner .left:hover {
+    opacity: 1;
+}
+
+#banner .right:hover {
+    opacity: 1;
+}
+
+#banner img {
+    width: 18px;
+    height: 32px;
+}
