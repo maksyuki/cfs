@@ -12,12 +12,12 @@ function banner() {
 
 function moveLeft() {
     $(picture[cur_picture]).css({"opacity": "0", "z-index": "0"});
-    cur_picture == picture_length - 1? cur_picture = 0 : cur_picture++;
+    cur_picture == picture_length - 1 ? cur_picture = 0 : cur_picture++;
     $(picture[cur_picture]).css({"opacity": "1", "z-index": "1"});
 }
 
 function moveRight() {
-    $(picture[cur_picture]).css({"opacity": "0", "z-index": "0"});   
+    $(picture[cur_picture]).css({"opacity": "0", "z-index": "0"});
     cur_picture == 0 ? cur_picture = picture_length - 1 : cur_picture--;
     $(picture[cur_picture]).css({"opacity": "1", "z-index": "1"});
 }

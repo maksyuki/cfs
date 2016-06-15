@@ -41,11 +41,11 @@
     -webkit-transform: rotate(180deg);
 }
 
-#banner:hover .left {
+#banner .left:hover {
     opacity: 1;
 }
 
-#banner:hover .right {
+#banner .right:hover {
     opacity: 1;
 }
 
@@ -60,16 +60,28 @@
     left: 60px;
     z-index: 2;
     color: white;
+    background: rgba(0, 0, 0, 0.75);
     font-size: 25px;
 }
 
-#banner .circle {
+#banner #circle_nav {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 16px;
-    height: 16px;
+    right: 5%;
+    bottom: 5%;
+    height: auto;
+    z-index: 2;
+}
+
+#banner #circle_nav .circle, #banner #circle_nav .circle_first {
+    position: relative;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
+    display: inline-block;
     border: 1px solid white;
     z-index: 2;
+}
+
+#banner #circle_nav .circle_first {
+    background: white;
 }
