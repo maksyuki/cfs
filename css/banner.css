@@ -6,7 +6,7 @@
 
 #banner {
     width: 100%;
-    height: 666px;
+    height: 680px;
     position: relative;
 }
 
@@ -24,6 +24,8 @@
     width: 18px;
     height: 32px;
     top: 50%;
+    padding: 6px;
+    background: rgba(0, 0, 0, 0.75);
     position: absolute;
     cursor: pointer;
     opacity: 0;
@@ -58,8 +60,9 @@
     position: absolute;
     top: 65%;
     left: 60px;
-    z-index: 2;
     color: white;
+    cursor: default;
+    z-index: 2;
     background: rgba(0, 0, 0, 0.75);
     font-size: 25px;
 }
@@ -69,19 +72,18 @@
     right: 5%;
     bottom: 5%;
     height: auto;
+    cursor: pointer;
     z-index: 2;
 }
 
-#banner #circle_nav .circle, #banner #circle_nav .circle_first {
+#banner #circle_nav .circle {
     position: relative;
     width: 8px;
     height: 8px;
     border-radius: 50%;
     display: inline-block;
     border: 1px solid white;
+    cursor: pointer;
     z-index: 2;
-}
-
-#banner #circle_nav .circle_first {
-    background: white;
+    transition: background 1s;
 }
