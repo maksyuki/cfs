@@ -1,7 +1,78 @@
 * {
     margin: 0;
     padding: 0;
+    text-decoration: none;
     font-family: 微软雅黑;
+}
+
+.nav {
+    height: 80px;
+    /*background: white;*/
+    line-height: 80px;
+    text-align: right;
+    width: 100%;
+    position: fixed;
+    color: white;
+    z-index: 99;
+    /*border-bottom: 1px solid #dddddd;*/
+}
+
+.nav a {
+    color: white;
+}
+
+.nav_content {
+    width: 100%;
+    height: 80px;
+    position: relative;
+}
+
+.nav_menu {
+    width: 100%;
+    max-width: 1200px;
+}
+
+#logo {
+    float: left;
+}
+
+.nav_menu_item {
+    padding: 31px 20px 20px 20px;
+    font-size: 14px;
+    position: relative;
+    transition: color, border, top 0.5s;
+}
+
+.nav_menu_item span {
+    border-bottom: 2px solid #1E90FF;
+    position: absolute;
+    bottom: 0;
+    width: 60%;
+    display: block;
+    left: 20%;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.nav_menu_item:hover {
+    top: -3px;
+    color: #1E90FF !important;
+}
+
+.nav_menu_item:hover span {
+    opacity: 1;
+    bottom: 10px;
+}
+
+.nav_productmenu {
+    width: 100%;
+    height: 0px;
+    clear: both;
+    position: relative;
+    background: #fff;
+    top: -4px;
+    border-bottom: 0px solid #ccc;
+    overflow: hidden;
 }
 
 #banner {
@@ -61,8 +132,6 @@
     top: 65%;
     left: 60px;
     color: white;
-    width: 366px;
-    height: 188px;
     cursor: default;
     opacity: 0;
     z-index: 2;
@@ -90,23 +159,4 @@
     cursor: pointer;
     z-index: 2;
     transition: background 1s;
-}
-
-#banner .down {
-    position: absolute;
-    bottom: 6%;
-    left: 50%;
-    color: white;
-    cursor: pointer;
-    z-index: 2;
-}
-
-#banner .down_arrow {
-    transform: rotate(270deg);
-    -webkit-transform: rotate(270deg);
-    position: absolute;
-}
-
-#banner #arrow2 {
-    top: 8px;
 }
