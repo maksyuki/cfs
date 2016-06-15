@@ -62,9 +62,11 @@
     left: 60px;
     color: white;
     cursor: default;
+    opacity: 0;
     z-index: 2;
     background: rgba(0, 0, 0, 0.75);
-    font-size: 25px;
+    transition: opacity, top, 0.3s linear 1s;
+    /*font-size: 25px;*/
 }
 
 #banner #circle_nav {
