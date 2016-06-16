@@ -30,6 +30,7 @@ function banner() {
         if (move_state) clearInterval(move_state);
         move_state = setInterval(moveRight, 8000);
     });
+    setInterval(moveDown, 2000);
 }
 
 function moveLeft() {
@@ -56,4 +57,14 @@ function moveRight() {
     $(banner_text[cur_picture]).css({"opacity": "1", "top": "62%"});
 }
 
-
+function moveDown() {
+    var arrow_1 = $("#arrow1");
+    var arrow_2 = $("#arrow2");
+    if(arrow_1.css("opacity") == "0") {
+        arrow_1.css({"opacity": "1"});
+        arrow_2.css({"opacity": "1"});
+    } else {
+        arrow_1.css({"opacity": "0"});
+        arrow_2.css({"opacity": "0"});
+    }
+}

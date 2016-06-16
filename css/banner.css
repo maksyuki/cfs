@@ -74,7 +74,7 @@
 #banner #circle_nav {
     position: absolute;
     right: 5%;
-    bottom: 5%;
+    bottom: 2%;
     height: auto;
     cursor: pointer;
     z-index: 2;
@@ -105,8 +105,10 @@
     transform: rotate(270deg);
     -webkit-transform: rotate(270deg);
     position: absolute;
+    transition: opacity 1s;
 }
 
 #banner #arrow2 {
     top: 8px;
+    transition-delay: 1s;
 }
