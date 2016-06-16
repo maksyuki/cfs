@@ -1,3 +1,4 @@
+addLoadEvent(nav);
 addLoadEvent(banner);
 
 function addLoadEvent(func) {
@@ -10,6 +11,34 @@ function addLoadEvent(func) {
             func();
         }
     }
+}
+
+function nav() {
+    $(".nav #product").mouseenter(function () {
+        $(".nav .nav_productmenu").stop();
+        $(".nav .nav_productmenu").animate({height: "180px"}, 500);
+        old_back = $(".nav").css("background-color");
+        $(".nav .nav_productmenu").css('background-color', old_back);
+        if (old_back != "rgb(40, 40, 40)") {
+            $(".nav .nav_productmenu").css("border-bottom", "1px solid #ccc");
+        } else {
+            $(".nav .nav_productmenu").css("border-bottom", "none");
+        }
+    });
+
+    $(".nav .nav_menu_item").mouseenter(function () {
+        if ($(this).attr("id") != "product") {
+            $(".nav .nav_productmenu").stop();
+            $(".nav .nav_productmenu").animate({height: "0"}, 500, function () {
+            }).css("border-bottom", "none");
+        }
+    });
+
+    $(".nav .nav_productmenu").mouseleave(function () {
+        $(".nav .nav_productmenu").stop();
+        $(".nav .nav_productmenu").animate({height: "0"}, 500, function () {
+        }).css("border-bottom", "none");
+    });
 }
 
 function banner() {
@@ -60,7 +89,7 @@ function moveRight() {
 function moveDown() {
     var arrow_1 = $("#arrow1");
     var arrow_2 = $("#arrow2");
-    if(arrow_1.css("opacity") == "0") {
+    if (arrow_1.css("opacity") == "0") {
         arrow_1.css({"opacity": "1"});
         arrow_2.css({"opacity": "1"});
     } else {
