@@ -35,20 +35,24 @@ function banner() {
 function moveLeft() {
     $(picture[cur_picture]).css({"opacity": "0", "z-index": "0"});
     $(point_nav[cur_picture]).css({"background": ""});
+    $(banner_text[cur_picture]).css({"transition": "opacity, top, 0.2s linear"});
     $(banner_text[cur_picture]).css({"opacity": "0", "top": "65%"});
     cur_picture == 0 ? cur_picture = picture_length - 1 : cur_picture--;
     $(picture[cur_picture]).css({"opacity": "1", "z-index": "1"});
     $(point_nav[cur_picture]).css({"background": "white"});
+    $(banner_text[cur_picture]).css({"transition": "opacity, top, 0.3s linear 1s"});
     $(banner_text[cur_picture]).css({"opacity": "1", "top": "62%"});
 }
 
 function moveRight() {
     $(picture[cur_picture]).css({"opacity": "0", "z-index": "0"});
     $(point_nav[cur_picture]).css({"background": ""});
+    $(banner_text[cur_picture]).css({"transition": "opacity, top, 0.2s linear"});
     $(banner_text[cur_picture]).css({"opacity": "0", "top": "65%"});
     cur_picture == picture_length - 1 ? cur_picture = 0 : cur_picture++;
     $(picture[cur_picture]).css({"opacity": "1", "z-index": "1"});
     $(point_nav[cur_picture]).css({"background": "white"});
+    $(banner_text[cur_picture]).css({"transition": "opacity, top, 0.3s linear 1s"});
     $(banner_text[cur_picture]).css({"opacity": "1", "top": "62%"});
 }
 
