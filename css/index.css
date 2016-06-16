@@ -6,24 +6,23 @@
 }
 
 .nav {
-    height: 80px;
+    position: fixed;
+    /*height: 80px;*/
+    height: 55px; /*add*/
     /*background: white;*/
-    line-height: 80px;
+    background: rgba(0, 0, 0, 0.50); /*add*/
+    /*line-height: 80px;*/
+    line-height: 55px; /*add*/
     text-align: right;
     width: 100%;
-    position: fixed;
-    color: white;
-    z-index: 99;
+    z-index: 2;
     /*border-bottom: 1px solid #dddddd;*/
-}
-
-.nav a {
-    color: white;
 }
 
 .nav_content {
     width: 100%;
-    height: 80px;
+    /*height: 80px;*/
+    height: 55px; /*add*/
     position: relative;
 }
 
@@ -32,14 +31,19 @@
     max-width: 1200px;
 }
 
+.nav_menu a {
+    /*color: black;*/
+    color: white; /*add*/
+}
+
 #logo {
     float: left;
 }
 
 .nav_menu_item {
+    position: relative;
     padding: 31px 20px 20px 20px;
     font-size: 14px;
-    position: relative;
     transition: color, border, top 0.5s;
 }
 
@@ -64,15 +68,22 @@
     bottom: 10px;
 }
 
-.nav_productmenu {
+.nav .nav_productmenu {
     width: 100%;
-    height: 0px;
+    height: 0;
     clear: both;
     position: relative;
-    background: #fff;
+    /*background: #fff;*/
     top: -4px;
-    border-bottom: 0px solid #ccc;
+    /*border-bottom: 0 solid #ccc;*/
     overflow: hidden;
+}
+
+.nav .nav_productmenu img {
+    width: 130px;
+    height: 130px;
+    position: relative;
+    margin: 30px 30px 0 0;
 }
 
 #banner {
@@ -132,6 +143,8 @@
     top: 65%;
     left: 60px;
     color: white;
+    width: 366px;
+    height: 188px;
     cursor: default;
     opacity: 0;
     z-index: 2;
@@ -143,7 +156,7 @@
 #banner #circle_nav {
     position: absolute;
     right: 5%;
-    bottom: 5%;
+    bottom: 2%;
     height: auto;
     cursor: pointer;
     z-index: 2;
@@ -159,4 +172,25 @@
     cursor: pointer;
     z-index: 2;
     transition: background 1s;
+}
+
+#banner .down {
+    position: absolute;
+    bottom: 6%;
+    left: 50%;
+    color: white;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#banner .down_arrow {
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    position: absolute;
+    transition: opacity 1s;
+}
+
+#banner #arrow2 {
+    top: 8px;
+    transition-delay: 1s;
 }

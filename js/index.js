@@ -20,7 +20,8 @@ function nav() {
         old_back = $(".nav").css("background-color");
         $(".nav .nav_productmenu").css('background-color', old_back);
         if (old_back != "rgb(40, 40, 40)") {
-            $(".nav .nav_productmenu").css("border-bottom", "1px solid #ccc");
+            // $(".nav .nav_productmenu").css("border-bottom", "1px solid #ccc");
+             $(".nav .nav_productmenu").css("border-bottom", "0 solid #ccc");
         } else {
             $(".nav .nav_productmenu").css("border-bottom", "none");
         }

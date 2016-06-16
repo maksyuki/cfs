@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>banner</title>
+    <title>nav</title>
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <script language="JavaScript" src="js/jquery-1.12.4.js"></script>
     <script language="JavaScript" src="js/index.js"></script>
@@ -12,14 +12,14 @@
     <div class="nav_content" align="center">
         <div class="nav_menu" align="right">
             <a href="index.html" id="logo">華航澤睿</a>
-            <a href="index.html" class="nav_menu_item" style="color: #1E90FF; top: -3px;">首页<span
-                    style="opacity: 1; bottom: 10px;"></span></a>
+            <a href="index.html" class="nav_menu_item">首页<span></span></a>
             <a href="index.html" class="nav_menu_item">动态<span></span></a>
-            <a href="index.html" class="nav_menu_item">自研产品<span></span></a>
+            <a href="index.html" class="nav_menu_item" id="product">自研产品<span></span></a>
             <a href="index.html" class="nav_menu_item">关于我们<span></span></a>
         </div>
-
         <div class="nav_productmenu">
+            <a href="index.html"><img src="images/robotdata.png"></a>
+            <a href="index.html"><img src="images/product.png"></a>
         </div>
     </div>
 </div>
@@ -36,20 +36,17 @@
     <a href="index.html">
         <div style="background-image: url(images/022.jpg);" class="banner_picture"></div>
     </a>
-    <div class="banner_text">
-        <h2>致力于提供专业航拍技术解决方案</h2>
-    </div>
-    <div class="banner_text">
-        <h2>我是超客</h2>
-    </div>
-    <div class="banner_text">
-        <h2>今天是个好日子</h2>
-    </div>
-    <div class="banner_text">
-        <h2>建筑材料是诗歌</h2>
-    </div>
+    <div class="banner_text"><h2>换个角度看世界</h2><p>提供无人机专业影视航拍素材</p></div>
+    <div class="banner_text"><h2>创新 · 科技 · 人文</h2><p>致力于提供无人机整体技术解决方案</p></div>
+    <div class="banner_text"><h2>智慧城市</h2><p>车流量采集、高精度三维地形重建</p></div>
+    <div class="banner_text"><h2>国内首创无人机地面站系统</h2><p></p></div>
     <div class="left"><img src="images/left.svg"></div>
     <div class="right"><img src="images/left.svg"></div>
+    <div class="down">
+        <!--<h4>向下滚动</h4>-->
+        <div class="down_arrow", id="arrow1"><img src="images/left.svg"></div>
+        <div class="down_arrow", id="arrow2"><img src="images/left.svg"></div>
+    </div>
     <div id="circle_nav">
         <div class="circle"></div>
         <div class="circle"></div>
