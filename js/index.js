@@ -1,5 +1,6 @@
 addLoadEvent(nav);
 addLoadEvent(banner);
+addLoadEvent(showMedia);
 
 function addLoadEvent(func) {
     var oldonload = window.onload;
@@ -21,7 +22,7 @@ function nav() {
         $(".nav .nav_productmenu").css('background-color', old_back);
         if (old_back != "rgb(40, 40, 40)") {
             // $(".nav .nav_productmenu").css("border-bottom", "1px solid #ccc");
-             $(".nav .nav_productmenu").css("border-bottom", "0 solid #ccc");
+            $(".nav .nav_productmenu").css("border-bottom", "0 solid #ccc");
         } else {
             $(".nav .nav_productmenu").css("border-bottom", "none");
         }
@@ -97,4 +98,14 @@ function moveDown() {
         arrow_1.css({"opacity": "0"});
         arrow_2.css({"opacity": "0"});
     }
+}
+
+function showMedia() {
+    $(".fancybox-media").fancybox({
+        openEffect : "none",
+        closeEffect : "'none",
+        prevEffect : "none",
+        nextEffect : "none",
+        arrows : false
+    });
 }
