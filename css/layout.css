@@ -152,6 +152,17 @@ body {
     font-size: 14px;
 }
 
+.section8 strong {
+    width: 561px;
+    margin-left: -280px;
+}
+
+.section8 h3 {
+    width: 561px;
+    margin-left: -280px;
+    background-image: url(../images/t8.png);
+}
+
 .bg51 {
     margin-left: -851px;
     background: url(../images/bg51.png) 50% 0 no-repeat;
@@ -176,6 +187,63 @@ body {
 .bg54 {
     margin-left: 645px;
     background: url(../images/bg54.png) 50% 0 no-repeat;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.bg81 {
+    position: absolute;
+    width: 100%;
+    bottom: 100px;
+    height: 215px;
+    background: url(../images/bg81.png) 50% 0 no-repeat;
+}
+
+.bg82 {
+    position: absolute;
+    left: 50%;
+    bottom: 160px;
+    width: 164px;
+    height: 117px;
+    margin-left: -180px;
+    background-image: url(../images/bg82.png);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.bg83 {
+    position: absolute;
+    left: 50%;
+    bottom: 280px;
+    width: 70px;
+    height: 29px;
+    margin-left: -330px;
+    background-image: url(../images/bg83.png);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.bg84 {
+    position: absolute;
+    left: 50%;
+    bottom: 320px;
+    width: 43px;
+    height: 26px;
+    margin-left: -410px;
+    background-image: url(../images/bg84.png);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.p8 {
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    width: 565px;
+    margin-left: -282px;
+    margin-top: 130px;
+    font-size: 16px;
+    color: #727F8C;
     opacity: 0;
     transition: all 1s;
 }
@@ -240,4 +308,30 @@ body {
     margin-left: 345px;
     opacity: 1;
     transition-delay: 0.7s;
+}
+
+.active .bg82 {
+    bottom: 260px;
+    margin-left: -280px;
+    opacity: 1;
+    transition-delay: 0.7s;
+}
+
+.active .bg83 {
+    bottom: 380px;
+    margin-left: -430px;
+    opacity: 1;
+    transition-delay: 1s;
+}
+
+.active .bg84 {
+    bottom: 420px;
+    margin-left: -510px;
+    opacity: 1;
+    transition-delay: 1.2s;
+}
+
+.active .p8 {
+    opacity: 1;
+    transition-delay: 1.7s;
 }
