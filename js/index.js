@@ -115,7 +115,7 @@ function showMedia() {
 function showfullPage() {
     $("#dowebok").fullpage({
         sectionsColor: ["#fff", "#fff", "#fff", "#fff"],
-        navigationTooltips: ["首页", "大美航拍", "智慧城市", "自研产品", "关于我们"],
+        navigationTooltips: ["首页", "影视航拍", "智慧城市", "自研产品", "关于我们"],
         navigation: true,
         loopHorizontal: true,
         controlArrows: false,
