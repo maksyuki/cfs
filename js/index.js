@@ -116,7 +116,7 @@ function showMedia() {
 function showfullPage() {
     $("#dowebok").fullpage({
         sectionsColor: ["#1bbc9b", "#4BBFC3", "#7BAABE", "#f90"],
-        navigationTooltips : ["apple", "pear", "peach", "waterlemon"],
-        navigation :  true
+        navigationTooltips: ["apple", "pear", "peach", "waterlemon"],
+        navigation: true
     });
 }

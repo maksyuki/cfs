@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 16px/1.8 "Microsoft Yahei", verdana;
+}
+
+.section {
+    position: relative;
+    overflow: hidden;
+}
+
+.section .bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.section .bg img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.p1 {
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    width: 510px;
+    margin-left: -255px;
+    margin-top: 130px;
+    font-size: 16px;
+    color: #727F8C;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.bg11 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 850px;
+    background: url(../images/bg11.png) 50% 0 no-repeat;
+    transition: all 1s;
+}
+
+.bg12 {
+    position: absolute;
+    bottom: -392px;
+    width: 100%;
+    height: 392px;
+    background: url(../images/bg12.png) 50% 0 no-repeat;
+    opacity: 0;
+    transition: all 1.7s;
+}
+
+.bg13 {
+    position: absolute;
+    bottom: -377px;
+    width: 100%;
+    height: 377px;
+    background: url(../images/bg13.png) 50% 0 no-repeat;
+    transition: all 1s;
+}
+
+.hgroup {
+    position: absolute;
+    width: 554px;
+    height: 176px;
+    left: 50%;
+    top: 25%;
+    margin: 0 0 0 -277px;
+    text-indent: -9999px;
+    background-image: url(../images/slogan.png);
+    opacity: 0;
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+    transition: all 1s;
+}
+
+.p11 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 600px;
+    margin: 0 0 0 -280px;
+    font-size: 14px;
+    color: #94a7c6;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+/*动画*/
+.active .p1 {
+    opacity: 1;
+    transition-delay: 1.7s;
+}
+
+.active .bg12 {
+    bottom: 90px;
+    opacity: 1;
+    transition-delay: 0.7s;
+}
+
+.active .bg13 {
+    bottom: 0;
+    opacity: 1;
+    transition-delay: 0.7s;
+}
+
+.active .hgroup {
+    opacity: 1;
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    transition-delay: 0.7s;
+}
+
+.active .p11 {
+    opacity: 1;
+    transition-duration: 1s;
+    transition-delay: 2s;
+}
