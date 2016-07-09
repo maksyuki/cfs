@@ -117,6 +117,12 @@ function showfullPage() {
     $("#dowebok").fullpage({
         sectionsColor: ["#1bbc9b", "#4BBFC3", "#7BAABE", "#f90"],
         navigationTooltips: ["apple", "pear", "peach", "waterlemon"],
-        navigation: true
+        navigation: true,
+        loopHorizontal: true,
+        controlArrows: false,
+        easing: "easeInQuart"
     });
+    setInterval(function () {
+        $.fn.fullpage.moveSlideRight();
+    }, 8000);
 }
