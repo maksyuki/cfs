@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout</title>
+
+    <!-- Add fullPage -->
+    <link rel="stylesheet" , type="text/css" , href="fullPage.js-master/jquery.fullPage.css">
+    <script type="text/javascript" , src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript" , src="fullPage.js-master/jquery.fullPage.js"></script>
+    <script type="text/javascript" , src="fullPage.js-master/vendors/jquery.easings.min.js"></script>
+
+    <script type="text/javascript" , src="js/index.js"></script>
+    <!--<script>-->
+        <!--$(function () {-->
+            <!--$("#dowebok").fullpage({-->
+                <!--sectionsColor: ["#1bbc9b", "#4BBFC3", "#7BAABE", "#f90"]-->
+            <!--});-->
+        <!--});-->
+    <!--</script>-->
+</head>
+<style>
+    .section {
+        text-align: center;
+        font: 50px "Microsoft Yahei";
+        color: white;
+    }
+</style>
+
+<body>
+<div id="dowebok">
+    <div class="section">第一屏</div>
+    <div class="section">第二屏</div>
+    <div class="section">
+        <div class="slide">第三屏的第一屏</div>
+        <div class="slide">第三屏的第二屏</div>
+        <div class="slide">第三屏的第三屏</div>
+        <div class="slide">第三屏的第四屏</div>
+    </div>
+    <div class="section">第四屏</div>
+</div>
+</body>
+</html>

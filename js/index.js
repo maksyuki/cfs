@@ -1,6 +1,7 @@
 addLoadEvent(nav);
 addLoadEvent(banner);
 addLoadEvent(showMedia);
+$(document).ready(showfullPage);
 
 function addLoadEvent(func) {
     var oldonload = window.onload;
@@ -102,10 +103,20 @@ function moveDown() {
 
 function showMedia() {
     $(".fancybox-media").fancybox({
-        openEffect : "none",
-        closeEffect : "'none",
-        prevEffect : "none",
-        nextEffect : "none",
-        arrows : false
+        padding: 0,
+        openEffect: "none",
+        closeEffect: "'none",
+        prevEffect: "none",
+        nextEffect: "none",
+        arrows: false
+    });
+}
+
+
+function showfullPage() {
+    $("#dowebok").fullpage({
+        sectionsColor: ["#1bbc9b", "#4BBFC3", "#7BAABE", "#f90"],
+        navigationTooltips : ["apple", "pear", "peach", "waterlemon"],
+        navigation :  true
     });
 }
