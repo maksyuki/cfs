@@ -152,17 +152,6 @@ body {
     font-size: 14px;
 }
 
-.section8 strong {
-    width: 561px;
-    margin-left: -280px;
-}
-
-.section8 h3 {
-    width: 561px;
-    margin-left: -280px;
-    background-image: url(../images/t8.png);
-}
-
 .bg51 {
     margin-left: -851px;
     background: url(../images/bg51.png) 50% 0 no-repeat;
@@ -189,6 +178,17 @@ body {
     background: url(../images/bg54.png) 50% 0 no-repeat;
     opacity: 0;
     transition: all 1s;
+}
+
+.section8 strong {
+    width: 561px;
+    margin-left: -280px;
+}
+
+.section8 h3 {
+    width: 561px;
+    margin-left: -280px;
+    background-image: url(../images/t8.png);
 }
 
 .bg81 {
@@ -244,6 +244,30 @@ body {
     margin-top: 130px;
     font-size: 16px;
     color: #727F8C;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.section8 .weibo {
+    position: absolute;
+    left: 56%;
+    top: 50%;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.section8 .mailbox {
+    position: absolute;
+    left: 61%;
+    top: 50%;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.section8 .phone {
+    position: absolute;
+    left: 66%;
+    top: 50%;
     opacity: 0;
     transition: all 1s;
 }
@@ -332,6 +356,22 @@ body {
 }
 
 .active .p8 {
+    opacity: 1;
+    transition-delay: 1.7s;
+}
+
+/*need modifying*/
+.active .weibo {
+    opacity: 1;
+    transition-delay: 1.7s;
+}
+
+.active .mailbox {
+    opacity: 1;
+    transition-delay: 1.7s;
+}
+
+.active .phone {
     opacity: 1;
     transition-delay: 1.7s;
 }
