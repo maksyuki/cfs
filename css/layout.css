@@ -60,8 +60,18 @@ body {
     transition: all 1s;
 }
 
+.section3 h3 {
+    background-image: url(../images/t2.png);
+}
+
 .section5 h3 {
     background-image: url(../images/t5.png);
+}
+
+.section8 h3 {
+    width: 561px;
+    margin-left: -280px;
+    background-image: url(../images/t8.png);
 }
 
 .p1 {
@@ -132,6 +142,61 @@ body {
     transition: all 0.5s;
 }
 
+.bg31 {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 892px;
+    height: 472px;
+    margin-left: -396px;
+    margin-bottom: 80px;
+    background-image: url(../images/bg31.png);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.bg32 {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 892px;
+    height: 472px;
+    margin-left: -396px;
+    background: url(../images/bg32.png) 470px bottom no-repeat;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.bg33 {
+    position: absolute;
+    /*left: 50%;*/
+    left: 60%;
+    bottom: 0;
+    /*width: 441px;*/
+    width: 663px;
+    /*height: 380px;*/
+    height: 368px;
+    margin-left: 50%;
+    /*background: url(../images/bg33.png) 0 0 no-repeat;*/
+    background: url(../images/inspire1.png) 0 0 no-repeat;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.p3 {
+    position: absolute;
+    width: 430px;
+    left: 50%;
+    /*top: 15%;*/
+    top: 5%;
+    margin-top: 250px;
+    margin-left: -100%;
+    font-size: 16px;
+    color: #525c69;
+    opacity: 0;
+    transition: all 1s;
+}
+
 .bg51, .bg52, .bg53, .bg54 {
     position: absolute;
     z-index: 1;
@@ -183,12 +248,6 @@ body {
 .section8 strong {
     width: 561px;
     margin-left: -280px;
-}
-
-.section8 h3 {
-    width: 561px;
-    margin-left: -280px;
-    background-image: url(../images/t8.png);
 }
 
 .bg81 {
@@ -318,6 +377,23 @@ body {
     transition-delay: 2s;
 }
 
+.active .p3 {
+    margin-left: -480px;
+    opacity: 1;
+    transition-delay: 0.7s;
+}
+
+.active .bg31, .active .bg32 {
+    opacity: 1;
+    transition-delay: 1s;
+}
+
+.active .bg33 {
+    margin-left: -120px;
+    opacity: 1;
+    transition-delay: 0.7s;
+}
+
 .active .bg51 {
     margin-left: -551px;
     opacity: 1;
@@ -374,12 +450,12 @@ body {
     transition-delay: 1.7s;
 }
 
-.active .mailbox {
+.active .weixin {
     opacity: 1;
     transition-delay: 1.7s;
 }
 
-.active .weixin {
+.active .mailbox {
     opacity: 1;
     transition-delay: 1.7s;
 }
