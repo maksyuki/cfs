@@ -197,6 +197,24 @@ body {
     transition: all 1s;
 }
 
+.movie1 {
+    position: absolute;
+    left: 17%;
+    top: 60%;
+    width: 320px;
+    height: 180px;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.movie2 {
+    position: absolute;
+    right: 17%;
+    top: 35%;
+    width: 320px;
+    height: 180px;
+    background: rgba(0, 0, 0, 0.25);
+}
+
 .bg51, .bg52, .bg53, .bg54 {
     position: absolute;
     z-index: 1;
