@@ -4,7 +4,8 @@
 }
 
 body {
-    font: 16px/1.8 "Microsoft Yahei";
+    font: 16px / 1.8 "Microsoft Yahei";
+    /*min-width: 1200px;*/
 }
 
 .section {
@@ -188,7 +189,7 @@ body {
     width: 430px;
     left: 50%;
     /*top: 15%;*/
-    top: 3%;
+    top: 1%;
     margin-top: 250px;
     margin-left: -100%;
     font-size: 16px;
@@ -240,10 +241,43 @@ body {
 .movie2 {
     position: absolute;
     right: 17%;
-    top: 35%;
-    width: 320px;
+    top: 30%;
+    /*width: 320px;*/
+    /*height: 180px;*/
+    width: 338px;
+    height: 290px;
+    padding: 20px 20px 0 20px;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.movie2 img {
+    width: 338px;
     height: 180px;
-    background: rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+.movie2 h2 {
+    color: white;
+    font-size: 20px;
+}
+
+.movie2 p {
+    color: white;
+    font-size: 14px;
+}
+
+.movie2 .fa-play {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.8);
+    top: 25%;
+    left: 46%;
+    font-size: 44px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.movie2 .fa-play:hover {
+    color: rgba(255, 255, 255, 0.4);
 }
 
 .bg51, .bg52, .bg53, .bg54 {
@@ -292,6 +326,38 @@ body {
     background: url(../images/bg54.png) 50% 0 no-repeat;
     opacity: 0;
     transition: all 1s;
+}
+
+.switch-tab {
+    position: absolute;
+    top: 30%;
+    left: 25%;
+}
+
+.switch-tab ul {
+    border-bottom: 2px solid #eaeaea;
+    display: inline-block;
+    width: 600px;
+}
+
+.switch-tab ul li {
+    display: inline-block;
+    width: 21%;
+    text-align: center;
+    cursor: pointer;
+    color: #707473;
+}
+
+#pro1 {
+    border-bottom: 2px solid #44a8f2;
+}
+
+#pro3 {
+    margin-left: 24px;
+}
+
+#pro4 {
+    margin-left: 50px;
 }
 
 .section8 strong {
