@@ -24,7 +24,7 @@ function showNav() {
         $(".nav .nav_productmenu").css("background-color", old_back);
         if (old_back != "rgb(40, 40, 40)") {
             // $(".nav .nav_productmenu").css("border-bottom", "1px solid #ccc");
-            $(".nav .nav_productmenu").css("border-bottom", "0 solid #ccc");
+            $(".nav .nav_productmenu").css("border-bottom", "1px solid #ccc");
         } else {
             $(".nav .nav_productmenu").css("border-bottom", "none");
         }

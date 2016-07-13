@@ -43,7 +43,7 @@
 }
 
 .nav_menu_item span {
-    border-bottom: 2px solid #1E90FF;
+    border-bottom: 2px solid #44a8f2;
     position: absolute;
     bottom: 0;
     width: 60%;
@@ -55,7 +55,7 @@
 
 .nav_menu_item:hover {
     top: -3px;
-    color: #1E90FF !important;
+    color: #44a8f2 !important;
 }
 
 .nav_menu_item:hover span {
