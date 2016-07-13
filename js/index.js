@@ -103,6 +103,12 @@ function moveDown() {
 }
 
 function showMedia() {
+    $(".fancybox-picture").fancybox({
+        padding: 0,
+        openEffect: "elastic",
+        openSpeed: 400
+    });
+
     $(".fancybox-media").fancybox({
         padding: 0,
         openEffect: "none",
