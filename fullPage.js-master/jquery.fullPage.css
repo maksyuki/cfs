@@ -161,7 +161,8 @@ html.fp-enabled,
     display: block;
     width: 14px;
     height: 13px;
-    margin: 7px;
+    /*margin: 7px;*/
+    margin: 20px;
     position: relative;
 }
 
@@ -184,10 +185,11 @@ html.fp-enabled,
 .fp-slidesNav ul li a.active span,
 #fp-nav ul li:hover a.active span,
 .fp-slidesNav ul li:hover a.active span {
-    height: 12px;
-    width: 12px;
+    height: 14px;
+    width: 14px;
     margin: -6px 0 0 -6px;
     border-radius: 100%;
+    background: #727F8C;
 }
 
 #fp-nav ul li a span,
@@ -195,11 +197,12 @@ html.fp-enabled,
     border-radius: 50%;
     position: absolute;
     z-index: 1;
-    height: 4px;
-    width: 4px;
-    border: 0;
+    height: 8px;
+    width: 8px;
+    /*border: 0;*/
     /*background: #333;*/
-    background: white; /*add*/
+    /*background: #44a8f2; !*add*!*/
+    border: 1px solid #44a8f2;
     left: 50%;
     top: 50%;
     margin: -2px 0 0 -2px;
@@ -211,18 +214,19 @@ html.fp-enabled,
 
 #fp-nav ul li:hover a span,
 .fp-slidesNav ul li:hover a span {
-    width: 10px;
-    height: 10px;
-    margin: -5px 0px 0px -5px;
+    width: 12px;
+    height: 12px;
+    margin: -5px 0 0 -5px;
+    background: #727F8C;
 }
 
 #fp-nav ul li .fp-tooltip {
     position: absolute;
     top: -2px;
     /*color: white;*/
-    color: white; /*add*/
+    color: #727F8C; /*add*/
     font-size: 14px;
-    font-family: arial, helvetica, sans-serif;
+    font-family: "Microsoft YaHei", arial, helvetica, sans-serif;
     white-space: nowrap;
     max-width: 220px;
     overflow: hidden;

@@ -115,10 +115,10 @@ function showMedia() {
 
 function showfullPage() {
     $("#dowebok").fullpage({
-        sectionsColor: ["#fff", "#fff", "#fff", "#fff"],
+        sectionsColor: ["#fff", "#fff", "#fff", "#fff", "#fff"],
         navigationTooltips: ["首页", "影视航拍", "智慧城市", "自研产品", "关于我们"],
+        showActiveTooltip: true,
         navigation: true,
-        loopHorizontal: true,
         controlArrows: false,
         easing: "easeInQuart"
     });
