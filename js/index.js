@@ -1,6 +1,7 @@
-addLoadEvent(nav);
+// addLoadEvent(showNav);
 addLoadEvent(banner);
 addLoadEvent(showMedia);
+$(document).ready(showNav);
 $(document).ready(showfullPage);
 
 function addLoadEvent(func) {
@@ -15,12 +16,12 @@ function addLoadEvent(func) {
     }
 }
 
-function nav() {
+function showNav() {
     $(".nav #product").mouseenter(function () {
         $(".nav .nav_productmenu").stop();
         $(".nav .nav_productmenu").animate({height: "180px"}, 500);
         old_back = $(".nav").css("background-color");
-        $(".nav .nav_productmenu").css('background-color', old_back);
+        $(".nav .nav_productmenu").css("background-color", old_back);
         if (old_back != "rgb(40, 40, 40)") {
             // $(".nav .nav_productmenu").css("border-bottom", "1px solid #ccc");
             $(".nav .nav_productmenu").css("border-bottom", "0 solid #ccc");

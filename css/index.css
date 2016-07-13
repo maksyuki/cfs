@@ -2,27 +2,28 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-    font-family: 微软雅黑;
+    font-family: 微软雅黑, sans-serif;
+}
+
+body {
+    font: 16px / 1.8 "Microsoft Yahei";
+    /*min-width: 1200px;*/
 }
 
 .nav {
     position: fixed;
-    /*height: 80px;*/
-    height: 55px; /*add*/
-    /*background: white;*/
-    background: rgba(0, 0, 0, 0.50); /*add*/
-    /*line-height: 80px;*/
-    line-height: 55px; /*add*/
+    height: 80px;
+    background: white;
+    line-height: 80px;
     text-align: right;
     width: 100%;
     z-index: 2;
-    /*border-bottom: 1px solid #dddddd;*/
+    border-bottom: 1px solid #dddddd;
 }
 
 .nav_content {
     width: 100%;
-    /*height: 80px;*/
-    height: 55px; /*add*/
+    height: 80px;
     position: relative;
 }
 
@@ -32,8 +33,7 @@
 }
 
 .nav_menu a {
-    /*color: black;*/
-    color: white; /*add*/
+    color: black;
 }
 
 #logo {
@@ -73,9 +73,9 @@
     height: 0;
     clear: both;
     position: relative;
-    /*background: #fff;*/
+    background: #fff;
     top: -4px;
-    /*border-bottom: 0 solid #ccc;*/
+    border-bottom: 0 solid #ccc;
     overflow: hidden;
 }
 
@@ -86,111 +86,581 @@
     margin: 30px 30px 0 0;
 }
 
-#banner {
-    width: 100%;
-    height: 680px;
+.section {
     position: relative;
+    overflow: hidden;
 }
 
-#banner .banner_picture {
+.section .bg {
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
-    background: #383a39 no-repeat center;
-    position: absolute;
-    opacity: 0;
-    z-index: 0;
-    transition: opacity 1s;
 }
 
-#banner .left, #banner .right {
-    width: 18px;
-    height: 32px;
-    top: 50%;
-    padding: 6px;
-    background: rgba(0, 0, 0, 0.75);
+.section .bg img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.section strong {
     position: absolute;
-    cursor: pointer;
+    left: 50%;
+    top: 15%;
+    z-index: 10;
+    width: 512px;
+    height: 45px;
+    margin-left: -256px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #748A9E;
     opacity: 0;
-    z-index: 2;
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+    transition: all 1s;
+}
+
+.section h3 {
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    z-index: 10;
+    width: 512px;
+    height: 45px;
+    margin-left: -256px;
+    margin-top: 60px;
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    opacity: 0;
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+    transition: all 1s;
+}
+
+.section3 h3 {
+    background-image: url(../images/t2.png);
+}
+
+.section5 h3 {
+    background-image: url(../images/t5.png);
+}
+
+.section8 h3 {
+    width: 561px;
+    margin-left: -280px;
+    background-image: url(../images/t8.png);
+}
+
+.p1 {
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    width: 510px;
+    margin-left: -255px;
+    margin-top: 130px;
+    font-size: 16px;
+    color: #727F8C;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.bg11 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 850px;
+    background: url(../images/bg11.png) 50% 0 no-repeat;
+    transition: all 1s;
+}
+
+.bg12 {
+    position: absolute;
+    bottom: -392px;
+    width: 100%;
+    height: 392px;
+    background: url(../images/bg12.png) 50% 0 no-repeat;
+    opacity: 0;
+    transition: all 1.7s;
+}
+
+.bg13 {
+    position: absolute;
+    bottom: -377px;
+    width: 100%;
+    height: 377px;
+    background: url(../images/bg13.png) 50% 0 no-repeat;
+    transition: all 1s;
+}
+
+.hgroup {
+    position: absolute;
+    width: 554px;
+    height: 176px;
+    left: 50%;
+    top: 25%;
+    margin: 0 0 0 -277px;
+    text-indent: -9999px;
+    background-image: url(../images/slogan.png);
+    opacity: 0;
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+    transition: all 1s;
+}
+
+.p11 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 600px;
+    margin: 0 0 0 -280px;
+    font-size: 14px;
+    color: #94a7c6;
+    opacity: 0;
     transition: all 0.5s;
 }
 
-#banner .left {
-    left: 40px;
-}
-
-#banner .right {
-    right: 40px;
-    transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-}
-
-#banner .left:hover {
-    opacity: 1;
-}
-
-#banner .right:hover {
-    opacity: 1;
-}
-
-#banner img {
-    width: 18px;
-    height: 32px;
-}
-
-#banner .banner_text {
+.bg31 {
     position: absolute;
-    top: 65%;
-    left: 60px;
-    color: white;
-    width: 366px;
-    height: 188px;
-    cursor: default;
-    opacity: 0;
-    z-index: 2;
-    background: rgba(0, 0, 0, 0.75);
-    transition: opacity, top, 0.3s linear 1s;
-    /*font-size: 25px;*/
-}
-
-#banner #circle_nav {
-    position: absolute;
-    right: 5%;
-    bottom: 2%;
-    height: auto;
-    cursor: pointer;
-    z-index: 2;
-}
-
-#banner #circle_nav .circle {
-    position: relative;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    display: inline-block;
-    border: 1px solid white;
-    cursor: pointer;
-    z-index: 2;
-    transition: background 1s;
-}
-
-#banner .down {
-    position: absolute;
-    bottom: 6%;
     left: 50%;
-    color: white;
-    cursor: pointer;
-    z-index: 2;
+    bottom: 0;
+    width: 892px;
+    height: 472px;
+    margin-left: -396px;
+    margin-bottom: 80px;
+    background-image: url(../images/bg31.png);
+    opacity: 0;
+    transition: all 1s;
 }
 
-#banner .down_arrow {
-    transform: rotate(270deg);
-    -webkit-transform: rotate(270deg);
+.bg32 {
     position: absolute;
-    transition: opacity 1s;
+    left: 50%;
+    bottom: 0;
+    width: 892px;
+    height: 472px;
+    margin-left: -396px;
+    background: url(../images/bg32.png) 470px bottom no-repeat;
+    opacity: 0;
+    transition: all 1s;
 }
 
-#banner #arrow2 {
-    top: 8px;
+.bg33 {
+    position: absolute;
+    /*left: 50%;*/
+    left: 60%;
+    bottom: 0;
+    /*width: 441px;*/
+    width: 663px;
+    /*height: 380px;*/
+    height: 368px;
+    margin-left: 50%;
+    /*background: url(../images/bg33.png) 0 0 no-repeat;*/
+    background: url(../images/inspire1.png) 0 0 no-repeat;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.p3 {
+    position: absolute;
+    width: 430px;
+    left: 50%;
+    /*top: 15%;*/
+    top: 1%;
+    margin-top: 250px;
+    margin-left: -100%;
+    font-size: 16px;
+    color: #525c69;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.movie1 {
+    position: absolute;
+    left: 17%;
+    top: 50%;
+    width: 338px;
+    height: 340px;
+    padding: 20px 20px 0 20px;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.movie1 img {
+    width: 338px;
+    height: 180px;
+    cursor: pointer;
+}
+
+.movie1 h2 {
+    color: white;
+    font-size: 20px;
+}
+
+.movie1 p {
+    color: white;
+    font-size: 14px;
+}
+
+.movie1 .fa-play {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.8);
+    top: 25%;
+    left: 46%;
+    font-size: 44px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.movie1 .fa-play:hover {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.movie2 {
+    position: absolute;
+    right: 17%;
+    top: 30%;
+    /*width: 320px;*/
+    /*height: 180px;*/
+    width: 338px;
+    height: 290px;
+    padding: 20px 20px 0 20px;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.movie2 img {
+    width: 338px;
+    height: 180px;
+    cursor: pointer;
+}
+
+.movie2 h2 {
+    color: white;
+    font-size: 20px;
+}
+
+.movie2 p {
+    color: white;
+    font-size: 14px;
+}
+
+.movie2 .fa-play {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.8);
+    top: 25%;
+    left: 46%;
+    font-size: 44px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.movie2 .fa-play:hover {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.bg51, .bg52, .bg53, .bg54 {
+    position: absolute;
+    z-index: 1;
+    width: 208px;
+    left: 50%;
+    bottom: 20%;
+    padding-top: 210px;
+    color: #fff;
+}
+
+.section5 h4 {
+    margin-bottom: 12px;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.section5 p {
+    font-size: 14px;
+}
+
+.bg51 {
+    margin-left: -851px;
+    background: url(../images/bg51.png) 50% 0 no-repeat;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.bg52 {
+    margin-left: -403px;
+    background: url(../images/bg52.png) 50% 0 no-repeat;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.bg53 {
+    margin-left: 195px;
+    background: url(../images/bg53.png) 50% 0 no-repeat;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.bg54 {
+    margin-left: 645px;
+    background: url(../images/bg54.png) 50% 0 no-repeat;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.switch-tab {
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.switch-tab ul {
+    border-bottom: 2px solid #eaeaea;
+    display: inline-block;
+    width: 600px;
+}
+
+.switch-tab ul li {
+    display: inline-block;
+    width: 21%;
+    text-align: center;
+    cursor: pointer;
+    color: #707473;
+}
+
+#pro1 {
+    border-bottom: 2px solid #44a8f2;
+}
+
+#pro3 {
+    margin-left: 24px;
+}
+
+#pro4 {
+    margin-left: 50px;
+}
+
+.section8 strong {
+    width: 561px;
+    margin-left: -280px;
+}
+
+.bg81 {
+    position: absolute;
+    width: 100%;
+    bottom: 100px;
+    height: 215px;
+    background: url(../images/bg81.png) 50% 0 no-repeat;
+}
+
+.bg82 {
+    position: absolute;
+    left: 50%;
+    bottom: 160px;
+    width: 164px;
+    height: 117px;
+    margin-left: -180px;
+    background-image: url(../images/bg82.png);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.bg83 {
+    position: absolute;
+    left: 50%;
+    bottom: 280px;
+    width: 70px;
+    height: 29px;
+    margin-left: -330px;
+    background-image: url(../images/bg83.png);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.bg84 {
+    position: absolute;
+    left: 50%;
+    bottom: 320px;
+    width: 43px;
+    height: 26px;
+    margin-left: -410px;
+    background-image: url(../images/bg84.png);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.p8 {
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    width: 565px;
+    margin-left: -282px;
+    margin-top: 130px;
+    font-size: 16px;
+    color: #727F8C;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.section8 .weibo {
+    position: absolute;
+    left: 51%;
+    top: 50%;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.section8 .weixin {
+    position: absolute;
+    left: 56%;
+    top: 50%;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.section8 .mailbox {
+    position: absolute;
+    left: 61%;
+    top: 50%;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.section8 .phone {
+    position: absolute;
+    left: 66%;
+    top: 50%;
+    opacity: 0;
+    transition: all 1s;
+}
+
+/*动画*/
+.active strong, .active h3 {
+    opacity: 1;
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    transition-delay: 0.7s;
+}
+
+.active .p1 {
+    opacity: 1;
+    transition-delay: 1.7s;
+}
+
+.active .bg12 {
+    bottom: 90px;
+    opacity: 1;
+    transition-delay: 0.7s;
+}
+
+.active .bg13 {
+    bottom: 0;
+    opacity: 1;
+    transition-delay: 0.7s;
+}
+
+.active .hgroup {
+    opacity: 1;
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    transition-delay: 0.7s;
+}
+
+.active .p11 {
+    opacity: 1;
+    transition-duration: 1s;
+    transition-delay: 2s;
+}
+
+.active .p3 {
+    margin-left: -480px;
+    opacity: 1;
+    transition-delay: 0.7s;
+}
+
+.active .bg31, .active .bg32 {
+    opacity: 1;
     transition-delay: 1s;
+}
+
+.active .bg33 {
+    margin-left: -120px;
+    opacity: 1;
+    transition-delay: 0.7s;
+}
+
+.active .bg51 {
+    margin-left: -551px;
+    opacity: 1;
+    transition-delay: 0.7s;
+}
+
+.active .bg52 {
+    margin-left: -253px;
+    opacity: 1;
+    transition-delay: 0.7s;
+}
+
+.active .bg53 {
+    margin-left: 45px;
+    opacity: 1;
+    transition-delay: 0.7s;
+}
+
+.active .bg54 {
+    margin-left: 345px;
+    opacity: 1;
+    transition-delay: 0.7s;
+}
+
+.active .switch-tab {
+    opacity: 1;
+    transition-delay: 0.7s;
+}
+
+.active .bg82 {
+    bottom: 260px;
+    margin-left: -280px;
+    opacity: 1;
+    transition-delay: 0.7s;
+}
+
+.active .bg83 {
+    bottom: 380px;
+    margin-left: -430px;
+    opacity: 1;
+    transition-delay: 1s;
+}
+
+.active .bg84 {
+    bottom: 420px;
+    margin-left: -510px;
+    opacity: 1;
+    transition-delay: 1.2s;
+}
+
+.active .p8 {
+    opacity: 1;
+    transition-delay: 1.7s;
+}
+
+/*need modifying*/
+.active .weibo {
+    opacity: 1;
+    transition-delay: 1.7s;
+}
+
+.active .weixin {
+    opacity: 1;
+    transition-delay: 1.7s;
+}
+
+.active .mailbox {
+    opacity: 1;
+    transition-delay: 1.7s;
+}
+
+.active .phone {
+    opacity: 1;
+    transition-delay: 1.7s;
 }

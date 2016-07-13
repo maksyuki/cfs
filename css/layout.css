@@ -332,6 +332,8 @@ body {
     position: absolute;
     top: 30%;
     left: 25%;
+    opacity: 0;
+    transition: all 1s;
 }
 
 .switch-tab ul {
@@ -529,6 +531,11 @@ body {
 
 .active .bg54 {
     margin-left: 345px;
+    opacity: 1;
+    transition-delay: 0.7s;
+}
+
+.active .switch-tab {
     opacity: 1;
     transition-delay: 0.7s;
 }
