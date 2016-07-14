@@ -47,6 +47,7 @@ body {
     position: relative;
     padding: 31px 20px 20px 20px;
     font-size: 14px;
+    cursor: pointer;
     transition: color, border, top 0.5s;
 }
 
@@ -99,7 +100,7 @@ body {
     cursor: default;
     opacity: 0;
     z-index: 2;
-    background: rgba(0, 0, 0, 0.75);
+    /*background: rgba(0, 0, 0, 0.75);*/
     transition: opacity, top, 0.3s linear 1s;
     /*font-size: 25px;*/
 }
@@ -268,7 +269,8 @@ body {
     position: absolute;
     /*left: 50%;*/
     left: 60%;
-    bottom: 0;
+    /*bottom: 0;*/
+    bottom: 45%;
     /*width: 441px;*/
     width: 663px;
     /*height: 380px;*/
@@ -297,11 +299,14 @@ body {
 .movie1 {
     position: absolute;
     left: 17%;
-    top: 50%;
+    /*top: 50%;*/
+    bottom: -50%;
     width: 338px;
     height: 340px;
     padding: 20px 20px 0 20px;
     background: rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    transition: all 1s;
 }
 
 .movie1 img {
@@ -336,14 +341,15 @@ body {
 
 .movie2 {
     position: absolute;
-    right: 17%;
-    top: 30%;
-    /*width: 320px;*/
-    /*height: 180px;*/
+    left: 45%;
+    /*top: 50%;*/
+    bottom: -50%;
     width: 338px;
-    height: 290px;
+    height: 340px;
     padding: 20px 20px 0 20px;
     background: rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    transition: all 1s;
 }
 
 .movie2 img {
@@ -667,8 +673,21 @@ body {
     transition-delay: 1s;
 }
 
+.active .movie1 {
+    opacity: 1;
+    bottom: 5%;
+    transition-delay: 0.7s;
+}
+
+.active .movie2 {
+    opacity: 1;
+    bottom: 5%;
+    transition-delay: 0.7s;
+}
+
 .active .bg33 {
-    margin-left: -120px;
+    /*margin-left: -120px;*/
+    margin-left: 110px;
     opacity: 1;
     transition-delay: 0.7s;
 }
