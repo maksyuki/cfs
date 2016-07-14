@@ -2,6 +2,7 @@
 // addLoadEvent(showBanner);
 addLoadEvent(showMedia);
 $(document).ready(showBanner);
+$(document).ready(returnTop);
 $(document).ready(showNav);
 $(document).ready(showfullPage);
 $(document).ready(function () {
@@ -111,6 +112,12 @@ function showBanner() {
     }, 8000);
 }
 
+function returnTop() {
+    $(".fa-arrow-circle-up").click(function () {
+        $.fn.fullpage.moveTo(1);
+    });
+}
+
 function showMedia() {
     $(".fancybox-picture").fancybox({
         padding: 0,
@@ -132,10 +139,17 @@ function showfullPage() {
     $("#dowebok").fullpage({
         sectionsColor: ["#fff", "#fff", "#fff", "#fff", "#fff"],
         navigationTooltips: ["首页", "影视航拍", "智慧城市", "自研产品", "关于我们"],
-        showActiveTooltip: true,
-        navigation: true,
+        // showActiveTooltip: true,
+        // navigation: true,
         controlArrows: false,
         easing: "easeInQuart",
+        onLeave: function (index, nextIndex, direction) {
+            if (nextIndex == 2) {
+                $(".fa-arrow-circle-up").css({"opacity": "0.75"});
+            } else if (nextIndex == 1) {
+                $(".fa-arrow-circle-up").css({"opacity": "0"});
+            }
+        },
         onSlideLeave: function (anchorLink, index, slideIndex, direction, nextSlideIndex) {
             banner_text = $(".banner_text");
             $(banner_text[slideIndex]).css({"transition": "opacity, top, 0.2s linear"});

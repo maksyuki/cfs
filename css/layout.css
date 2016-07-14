@@ -607,6 +607,17 @@ body {
     color: #44a8f2;
 }
 
+.fa-arrow-circle-up {
+    position: fixed;
+    bottom: 13%;
+    right: 5%;
+    font-size: 45px;
+    color: #44a8f2;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
 /*动画*/
 .active strong, .active h3 {
     opacity: 1;
