@@ -141,36 +141,51 @@ body {
     transition: all 1s;
 }
 
-.section h3 {
+/*.section h3 {*/
+/*position: absolute;*/
+/*left: 50%;*/
+/*top: 15%;*/
+/*z-index: 10;*/
+/*width: 512px;*/
+/*height: 45px;*/
+/*margin-left: -256px;*/
+/*margin-top: 60px;*/
+/*text-indent: -9999px;*/
+/*background-repeat: no-repeat;*/
+/*opacity: 0;*/
+/*-webkit-transform: scale(0.5, 0.5);*/
+/*transform: scale(0.5, 0.5);*/
+/*transition: all 1s;*/
+/*!*background: rgba(0, 0, 0, 0.50);*!*/
+/*}*/
+
+.section .bigtitle {
     position: absolute;
-    left: 50%;
-    top: 15%;
-    z-index: 10;
-    width: 512px;
-    height: 45px;
-    margin-left: -256px;
-    margin-top: 60px;
-    text-indent: -9999px;
-    background-repeat: no-repeat;
+    top: 20%;
+    left: 32%;
+    font-family: "Source-Han-Ligh48e73877a6908";
+    font-size: 45px;
+    text-align: center;
     opacity: 0;
     -webkit-transform: scale(0.5, 0.5);
     transform: scale(0.5, 0.5);
     transition: all 1s;
+    /*background: rgba(0, 0, 0, 0.2);*/
 }
 
-.section3 h3 {
-    background-image: url(../images/t2.png);
-}
+/*.section3 h3 {*/
+/*background-image: url(../images/t2.png);*/
+/*}*/
 
-.section5 h3 {
-    background-image: url(../images/t5.png);
-}
+/*.section5 h3 {*/
+/*background-image: url(../images/t5.png);*/
+/*}*/
 
-.section8 h3 {
-    width: 561px;
-    margin-left: -280px;
-    background-image: url(../images/t8.png);
-}
+/*.section8 h3 {*/
+/*width: 561px;*/
+/*margin-left: -280px;*/
+/*background-image: url(../images/t8.png);*/
+/*}*/
 
 .p1 {
     position: absolute;
@@ -464,10 +479,10 @@ body {
     margin-left: 50px;
 }
 
-.section8 strong {
-    width: 561px;
-    margin-left: -280px;
-}
+/*.section8 strong {*/
+    /*width: 561px;*/
+    /*margin-left: -280px;*/
+/*}*/
 
 .bg81 {
     position: absolute;
@@ -625,7 +640,7 @@ body {
 }
 
 /*动画*/
-.active strong, .active h3 {
+.active strong, .active .bigtitle {
     opacity: 1;
     -webkit-transform: scale(1, 1);
     transform: scale(1, 1);
