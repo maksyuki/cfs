@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    border: 0; /*for IE*/
 }
 
 body {
@@ -41,6 +42,8 @@ body {
 
 #logo {
     float: left;
+    padding-top: 15px;
+    height: 30px;
 }
 
 .nav_menu_item {
@@ -447,8 +450,8 @@ body {
 
 .switch-tab {
     position: absolute;
-    top: 30%;
-    left: 25%;
+    bottom: 10%;
+    left: 28%;
     opacity: 0;
     transition: all 1s;
 }
@@ -480,8 +483,8 @@ body {
 }
 
 /*.section8 strong {*/
-    /*width: 561px;*/
-    /*margin-left: -280px;*/
+/*width: 561px;*/
+/*margin-left: -280px;*/
 /*}*/
 
 .bg81 {
