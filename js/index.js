@@ -1,6 +1,7 @@
 // addLoadEvent(showNav);
 // addLoadEvent(showBanner);
-addLoadEvent(showMedia);
+// addLoadEvent(showMedia);
+$(document).ready(showMedia);
 $(document).ready(showBanner);
 $(document).ready(returnTop);
 $(document).ready(showNav);
@@ -189,6 +190,20 @@ function showfullPage() {
                 $(".fa-arrow-circle-up").css({"opacity": "0.75"});
             } else if (nextIndex == 1) {
                 $(".fa-arrow-circle-up").css({"opacity": "0"});
+            } else if (nextIndex == 5) {
+                for (var i = 0; i < switch_tab.length; i++) {
+                    if ($(switch_tab[i]).css("border-bottom") == "2px solid rgb(68, 168, 242)") {
+                        $(switch_table_p5[i]).css({"left": "112%", "opacity": "0"});
+                        $(switch_table_img[i]).css({"margin-left": "-100%", "opacity": "0"});
+                    }
+                }
+            } else if (nextIndex == 4) {
+                for (var i = 0; i < switch_tab.length; i++) {
+                    if ($(switch_tab[i]).css("border-bottom") == "2px solid rgb(68, 168, 242)") {
+                        $(switch_table_p5[i]).css({"left": "50%", "opacity": "1"});
+                        $(switch_table_img[i]).css({"margin-left": "-480px", "opacity": "1"});
+                    }
+                }
             }
         },
         onSlideLeave: function (anchorLink, index, slideIndex, direction, nextSlideIndex) {

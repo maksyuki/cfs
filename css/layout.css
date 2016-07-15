@@ -425,10 +425,11 @@ body {
     width: 430px;
     left: 112%;
     /*top: 15%;*/
-    top: 1%;
+    top: 32%;
     margin-top: 250px;
     font-size: 16px;
     color: #525c69;
+    z-index: 12;
     opacity: 0;
     transition: all 1s;
 }
@@ -502,12 +503,23 @@ body {
     margin-left: 50px;
 }
 
+.product_pic0 {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    margin-left: -100%;
+    height: 149px;
+    opacity: 0;
+    transition: all 1s;
+}
+
 .product_pic {
     position: absolute;
     top: 32%;
     left: 50%;
     margin-left: -100%;
-    height: 110px;
+    height: 400px;
+    z-index: 6;
     opacity: 0;
     transition: all 1s;
 }
