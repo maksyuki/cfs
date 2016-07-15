@@ -5,8 +5,11 @@ $(document).ready(showBanner);
 $(document).ready(returnTop);
 $(document).ready(showNav);
 $(document).ready(showfullPage);
+$(document).ready(clickSwitchTab);
 $(document).ready(function () {
     $(".banner_zero").css({"opacity": "1", "top": "62%"});
+    $(".p50").css({"transition-delay": "0.7s"});
+    $(".product_pic0").css({"transition-delay": "0.7s"});
 });
 
 function addLoadEvent(func) {
@@ -115,6 +118,44 @@ function showBanner() {
 function returnTop() {
     $(".fa-arrow-circle-up").click(function () {
         $.fn.fullpage.moveTo(1);
+    });
+}
+
+function changeSwitchTab(index) {
+    for (var i = 0; i < switch_tab.length; i++) {
+        if ($(switch_tab[i]).css("border-bottom") == "2px solid rgb(68, 168, 242)") {
+            $(switch_tab[i]).css({"border-bottom": "0 solid #44a8f2"});
+            $(switch_table_p5[i]).css({"transition-delay": ""});
+            $(switch_table_p5[i]).css({"left": "112%", "opacity": "0"});
+            $(switch_table_img[i]).css({"transition-delay": ""});
+            $(switch_table_img[i]).css({"margin-left": "-100%", "opacity": "0"});
+            $(switch_tab[index]).css({"border-bottom": "2px solid #44a8f2"});
+            $(switch_table_p5[index]).css({"transition-delay": "0.7s"});
+            $(switch_table_p5[index]).css({"left": "50%", "opacity": "1"});
+            $(switch_table_img[index]).css({"transition-delay": "0.7s"});
+            $(switch_table_img[index]).css({"margin-left": "-480px", "opacity": "1"});
+        }
+    }
+}
+
+function clickSwitchTab() {
+    switch_tab = $(".pro");
+    switch_table_p5 = $(".switch-table-content p");
+    switch_table_img = $(".switch-table-content img");
+    $("#pro0").click(function () {
+        changeSwitchTab(0)
+    });
+    $("#pro1").click(function () {
+        changeSwitchTab(1)
+    });
+    $("#pro2").click(function () {
+        changeSwitchTab(2)
+    });
+    $("#pro3").click(function () {
+        changeSwitchTab(3)
+    });
+    $("#pro4").click(function () {
+        changeSwitchTab(4)
     });
 }
 
