@@ -1,0 +1,163 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    border: 0; /* for IE*/
+    color: black;
+    font-family: "Microsoft YaHei", Hiragino Sans GB, sans-serif;
+}
+
+body {
+    /*position: relative;*/
+    /*top: 0;*/
+    min-width: 1200px;
+}
+
+.nav {
+    /*position: absolute;*/
+    height: 60px;
+    background: white;
+    line-height: 60px;
+    text-align: right;
+    width: 100%;
+    z-index: 12;
+    border-bottom: 1px solid #dddddd;
+}
+
+.nav_content {
+    width: 100%;
+    height: 60px;
+    position: relative;
+}
+
+.nav_menu {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.nav_menu a {
+    color: #707473;
+}
+
+#logo {
+    float: left;
+    padding-top: 15px;
+    height: 30px;
+}
+
+.nav_menu_item {
+    position: relative;
+    padding: 31px 20px 20px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color, border, top 0.5s;
+}
+
+.nav_menu_item span {
+    border-bottom: 2px solid #44a8f2;
+    position: absolute;
+    bottom: 0;
+    width: 60%;
+    display: block;
+    left: 20%;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.nav_menu_item:hover {
+    top: -3px;
+    color: #44a8f2 !important;
+}
+
+.nav_menu_item:hover span {
+    opacity: 1;
+    bottom: 10px;
+}
+
+.nav .nav_productmenu {
+    width: 100%;
+    height: 0;
+    clear: both;
+    position: relative;
+    background: #fff;
+    top: -4px;
+    border-bottom: 0 solid #ccc;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.nav .nav_productmenu img {
+    width: 199px;
+    height: 158px;
+    position: relative;
+    margin: 30px 30px 0 0;
+}
+
+.bigtitle {
+    position: relative;
+    top: 20%;
+    left: -1%;
+    margin-top: 25px;
+    font-family: "Source-Han-Ligh48e73877a6908";
+    font-size: 45px;
+    text-align: center;
+}
+
+.text {
+    /*text-align: center;*/
+    /*margin: 0 20px;*/
+    position: relative;
+    left: 26%;
+    width: 657px;
+    margin-top: 20px;
+}
+
+.picture_c {
+    text-align: center;
+}
+
+.picture {
+    width: auto;
+    margin: 0 20px;
+    margin-top: 70px;
+}
+
+.picture a {
+    margin: 0 10px;
+}
+
+.fancybox img {
+    width: 310px;
+    height: 200px;
+}
+
+.footer {
+    text-align: center;
+    height: 105px;
+    background-color: #282828;
+}
+
+.footer .ft {
+    margin-top: 148px;
+    width: auto;
+    height: 95px;
+    font-size: 13px;
+    /*padding-top: 15px;*/ /*use it will have margin-bottom!!!*/
+}
+
+.footer .p1 {
+    padding-top: 17px;
+}
+
+.footer .p2 {
+    padding-top: 11px;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #44a8f2;
+}

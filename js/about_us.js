@@ -104,9 +104,6 @@ function d_hide() {
 
 function showFancyBox() {
     $(".fancybox").fancybox({
-        padding: 0,
-        autoSize: false,
-        width: 800,
-        height: 600
+        padding: 0
     });
 }

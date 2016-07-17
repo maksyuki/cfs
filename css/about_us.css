@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     text-decoration: none;
-    border: 0;/* for IE*/
+    border: 0; /* for IE*/
     color: black;
     font-family: "Microsoft YaHei", Hiragino Sans GB, sans-serif;
 }
@@ -93,6 +93,13 @@ body {
     margin: 30px 30px 0 0;
 }
 
+.big {
+    width: 100%;
+    background: #2d2f31;
+    margin-top: 130px;
+    /*background: white;*/
+}
+
 .about_us {
     width: 100%;
     margin-top: 95px;
@@ -124,13 +131,6 @@ body {
 .about_us p {
     margin: 23px 382px 0 382px;
     color: black;
-}
-
-.big {
-    width: 100%;
-    background: #2d2f31;
-    margin-top: 130px;
-    /*background: white;*/
 }
 
 .big .big_c {
@@ -323,10 +323,23 @@ body {
     text-align: center;
 }
 
-.ourstory p {
-    text-align: center;
-    margin: 0 20px;
+.ourstory .text {
+    /*text-align: center;*/
+    /*margin: 0 20px;*/
+    position: relative;
+    left: 26%;
+    width: 657px;
     margin-top: 20px;
+}
+
+.ourstory .picture_c {
+    text-align: center;
+}
+
+.ourstory .picture {
+    width: auto;
+    margin: 0 20px;
+    margin-top: 70px;
 }
 
 .ourstory .picture a {
@@ -338,34 +351,5 @@ body {
     height: 200px;
 }
 
-.footer {
-    text-align: center;
-    height: 105px;
-    background-color: #282828;
-}
-
-.footer .ft {
-    margin-top: 148px;
-    width: auto;
-    height: 95px;
-    font-size: 13px;
-    /*padding-top: 15px;*/ /*use it will have margin-bottom!!!*/
-}
-
-.footer .p1 {
-    padding-top: 17px;
-}
-
-.footer .p2 {
-    padding-top: 11px;
-}
-
-.footer a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.footer a:hover {
-    color: #44a8f2;
-}
+f
 
