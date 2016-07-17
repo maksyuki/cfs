@@ -25,18 +25,18 @@ body {
     border-bottom: 1px solid #dddddd;
 }
 
-.nav_content {
+.nav .content {
     width: 100%;
     height: 60px;
     position: relative;
 }
 
-.nav_menu {
+.nav .menu {
     width: 100%;
     max-width: 1200px;
 }
 
-.nav_menu a {
+.nav .menu a {
     color: #707473;
 }
 
@@ -46,7 +46,7 @@ body {
     height: 30px;
 }
 
-.nav_menu_item {
+.nav .menu .item {
     position: relative;
     padding: 31px 20px 20px 20px;
     font-size: 14px;
@@ -54,7 +54,7 @@ body {
     transition: color, border, top 0.5s;
 }
 
-.nav_menu_item span {
+.nav .menu .item span {
     border-bottom: 2px solid #44a8f2;
     position: absolute;
     bottom: 0;
@@ -65,17 +65,17 @@ body {
     transition: all 0.5s;
 }
 
-.nav_menu_item:hover {
+.nav .menu .item:hover {
     top: -3px;
     color: #44a8f2 !important;
 }
 
-.nav_menu_item:hover span {
+.nav .menu .item:hover span {
     opacity: 1;
     bottom: 10px;
 }
 
-.nav .nav_productmenu {
+.nav .productmenu {
     width: 100%;
     height: 0;
     clear: both;
@@ -86,14 +86,14 @@ body {
     overflow: hidden;
 }
 
-.nav .nav_productmenu img {
+.nav .productmenu img {
     width: 199px;
     height: 158px;
     position: relative;
     margin: 30px 30px 0 0;
 }
 
-#banner .banner_text {
+#banner .text {
     position: absolute;
     top: 65%;
     left: 60px;
@@ -144,24 +144,6 @@ body {
     transition: all 1s;
 }
 
-/*.section h3 {*/
-/*position: absolute;*/
-/*left: 50%;*/
-/*top: 15%;*/
-/*z-index: 10;*/
-/*width: 512px;*/
-/*height: 45px;*/
-/*margin-left: -256px;*/
-/*margin-top: 60px;*/
-/*text-indent: -9999px;*/
-/*background-repeat: no-repeat;*/
-/*opacity: 0;*/
-/*-webkit-transform: scale(0.5, 0.5);*/
-/*transform: scale(0.5, 0.5);*/
-/*transition: all 1s;*/
-/*!*background: rgba(0, 0, 0, 0.50);*!*/
-/*}*/
-
 .section .bigtitle {
     position: absolute;
     top: 20%;
@@ -175,20 +157,6 @@ body {
     transition: all 1s;
     /*background: rgba(0, 0, 0, 0.2);*/
 }
-
-/*.section3 h3 {*/
-/*background-image: url(../images/t2.png);*/
-/*}*/
-
-/*.section5 h3 {*/
-/*background-image: url(../images/t5.png);*/
-/*}*/
-
-/*.section8 h3 {*/
-/*width: 561px;*/
-/*margin-left: -280px;*/
-/*background-image: url(../images/t8.png);*/
-/*}*/
 
 .p1 {
     position: absolute;
