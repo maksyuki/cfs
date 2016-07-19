@@ -34,12 +34,12 @@
         <div class="cover-container">
             <div class="masthead clearfix">
                 <div class="inner">
-                    <h3 class="masthead-brand">Cover</h3>
+                    <h3 class="masthead-brand">华航泽睿</h3>
                     <nav>
                         <ul class="nav masthead-nav">
-                            <li class="active"><a href="#">Home</a></li>
-                            <li><a href="#">Features</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li class="active"><a href="#">首页</a></li>
+                            <li><a href="#">自研产品</a></li>
+                            <li><a href="#">关于我们</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -60,6 +60,8 @@
             </div>
         </div>
     </div>
+    <a class="fancybox-media fancybox.iframe"
+       href="http://www.tudou.com/programs/view/html5embed.action?type=0&code=eHi0cRf8uXs&lcode=&resourceId=947998952_06_05_99">tudou</a>
 </div>
 <!-- Bootstrap core JavaScript
 ================================================== -->
@@ -68,5 +70,21 @@
 <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script type="text/javascript" src="scripts/ie10-viewport-bug-workaround.js"></script>
+<script type="text/javascript" src="scripts/jquery.mousewheel-3.0.6.pack.js"></script>
+<script type="text/javascript" src="scripts/jquery.fancybox.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="scripts/jquery.fancybox.css?v=2.1.5" media="screen"/>
+<script type="text/javascript" src="scripts/jquery.fancybox-media.js?v=1.0.6"></script>
+<script>
+    $(document).ready(function () {
+        $(".fancybox-media").fancybox({
+            padding: 0,
+            openEffect: "none",
+            closeEffect: "'none",
+            prevEffect: "none",
+            nextEffect: "none",
+            arrows: false
+        });
+    })
+</script>
 </body>
 </html>

@@ -3,6 +3,10 @@
  */
 
 /* Links */
+* {
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
 a,
 a:focus,
 a:hover {
