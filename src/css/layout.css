@@ -6,7 +6,7 @@
 }
 
 body {
-    font: 16px / 1.8 "Microsoft Yahei";
+    font: 16px / 1.8 "Microsoft Yahei", sans-serif;
     /*min-width: 1200px;*/
 }
 
@@ -98,7 +98,7 @@ body {
     top: 65%;
     left: 60px;
     color: white;
-    width: 366px;
+    width: 485px;
     height: 188px;
     cursor: default;
     opacity: 0;
@@ -106,6 +106,14 @@ body {
     /*background: rgba(0, 0, 0, 0.75);*/
     transition: opacity, top, 0.3s linear 1s;
     /*font-size: 25px;*/
+}
+
+#banner h2 {
+    font-size: 40px;
+}
+
+#banner p {
+    font-size: 25px;
 }
 
 .section {

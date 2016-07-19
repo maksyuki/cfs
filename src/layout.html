@@ -34,9 +34,36 @@
     <!-- Add youziku font -->
     <link href='http://cdn.webfont.youziku.com/webfonts/nomal/26888/46865/57877f8df629db0ba0d4a3ec.css' rel='stylesheet'
           type='text/css'/>
+
+    <!-- Add loader -->
+    <link rel="stylesheet" href="nprogress-master/nprogress.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <script src="nprogress-master/nprogress.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            NProgress.configure({
+                template: $('#splash-template').html()
+            });
+            NProgress.start();
+        });
+        $(window).load(function () {
+            NProgress.done();
+        })
+    </script>
 </head>
 
 <body>
+<script type="text" id="splash-template">
+    <div class="splash card">
+        <div role="spinner">
+            <div class="spinner-icon"></div>
+        </div>
+        <p class="lead" style="text-align:center">正在加载中，请稍后...</p>
+        <div class="progress">
+            <div class="mybar" role="bar"></div>
+        </div>
+    </div>
+</script>
 <div id="layout">
     <div id="nav" class="nav">
         <div class="content" align="center">
@@ -58,9 +85,9 @@
     </div>
     <div id="banner">
         <div class="text banner_zero"><h2>换个角度看世界</h2>
-            <p>提供无人机专业影视航拍素材</p></div>
+            <p>华航泽睿提供无人机专业影视航拍素材</p></div>
         <div class="text"><h2>创新 · 科技 · 人文</h2>
-            <p>致力于提供无人机整体技术解决方案</p></div>
+            <p>华航泽睿致力于提供无人机整体技术解决方案</p></div>
         <div class="text"><h2>智慧城市</h2>
             <p>车流量采集、高精度三维地形重建</p></div>
         <div class="text"><h2>国内首创无人机地面站系统</h2>
