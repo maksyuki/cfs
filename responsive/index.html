@@ -13,10 +13,12 @@
     <title>华航泽睿官网|提供无人机整体技术解决方案</title>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css?v=2.1.5" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
     <!-- Custom styles for this template -->
     <link rel="stylesheet" type="text/css" href="css/index.css">
-
+    <link href='http://cdn.webfont.youziku.com/webfonts/nomal/26888/46865/57877f8df629db0ba0d4a3ec.css' rel='stylesheet'
+          type='text/css'/>
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]>
     <!--<script src="scripts/ie8-responsive-file-warning.js"></script><![endif]&ndash;&gt;-->
@@ -38,8 +40,9 @@
                     <nav>
                         <ul class="nav masthead-nav">
                             <li class="active"><a href="#">首页</a></li>
+                            <li><a href="#">动态</a></li>
                             <li><a href="#">自研产品</a></li>
-                            <li><a href="#">关于我们</a></li>
+                            <li><a href="about_us.html">关于我们</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -60,9 +63,13 @@
             </div>
         </div>
     </div>
-    <a class="fancybox-media fancybox.iframe"
-       href="http://www.tudou.com/programs/view/html5embed.action?type=0&code=eHi0cRf8uXs&lcode=&resourceId=947998952_06_05_99">tudou</a>
+    <!--<a class="fancybox-media fancybox.iframe"-->
+    <!--href="http://www.tudou.com/programs/view/html5embed.action?type=0&code=eHi0cRf8uXs&lcode=&resourceId=947998952_06-->
+    <!--_05_99">tudou-->
+    <!--</a>-->
 </div>
+</body>
+</html>
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
@@ -70,21 +77,14 @@
 <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script type="text/javascript" src="scripts/ie10-viewport-bug-workaround.js"></script>
+<!--Add fancybox -->
 <script type="text/javascript" src="scripts/jquery.mousewheel-3.0.6.pack.js"></script>
 <script type="text/javascript" src="scripts/jquery.fancybox.js?v=2.1.5"></script>
-<link rel="stylesheet" type="text/css" href="scripts/jquery.fancybox.css?v=2.1.5" media="screen"/>
 <script type="text/javascript" src="scripts/jquery.fancybox-media.js?v=1.0.6"></script>
-<script>
-    $(document).ready(function () {
-        $(".fancybox-media").fancybox({
-            padding: 0,
-            openEffect: "none",
-            closeEffect: "'none",
-            prevEffect: "none",
-            nextEffect: "none",
-            arrows: false
-        });
-    })
-</script>
-</body>
-</html>
+<!-- Add fullpage -->
+<script type="text/javascript" src="scripts/scrolloverflow.min.js"></script>
+<!-- before full.js -->
+<script type="text/javascript" src="scripts/jquery.easings.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.fullPage.min.js"></script>
+<!-- Add index -->
+<script type="text/javascript" src="scripts/index.js"></script>
