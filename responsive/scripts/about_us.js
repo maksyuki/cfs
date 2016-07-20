@@ -2,6 +2,7 @@ $(document).ready(showMedia);
 $(document).ready(showPathNavigation);
 
 function showMedia() {
+    $(".fancybox-picture").fancybox({});
     $(".fancybox-media").fancybox({
         padding: 0,
         openEffect: "none",
@@ -13,12 +14,12 @@ function showMedia() {
 }
 
 function showPathNavigation() {
-    $(window).scroll(is_scroll);
-    $(".big .day1").hover(d_show, d_hide);
-    $(".big .day2").hover(d_show, d_hide);
+    $(window).scroll(isScroll);
+    $(".big .day1").hover(showDayEvent, hideDayEvent);
+    $(".big .day2").hover(showDayEvent, hideDayEvent);
 }
 
-function is_scroll() {
+function isScroll() {
     if ($(window).scrollTop() > $(".big").offset().top - 300 && $(".big .blue").css("width") == "0px") {
         $(".big .blue").animate({width: "83%"}, 3000);
         list1 = $(".big .day1");
@@ -53,7 +54,7 @@ function is_scroll() {
     }
 }
 
-function d_show() {
+function showDayEvent() {
     d_id = $(this).attr("id");
     if (d_id == "d1") {
         $(".big .det").text("2014年8月14日，西安华航泽睿广告传播有限公司成立。");
@@ -78,7 +79,7 @@ function d_show() {
     $(this).find(".title").css("color", "#fff");
 }
 
-function d_hide() {
+function hideDayEvent() {
     $(".big .det").stop().animate({opacity: "0"}, 200);
     $(this).find(".title").css("color", "#ccc");
 }

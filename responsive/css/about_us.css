@@ -2,6 +2,42 @@
     font-family: "Microsoft YaHei", sans-serif;
 }
 
+/*nav*/
+
+/*about_us*/
+.about_us {
+    width: 100%;
+    margin-top: 95px;
+}
+
+.about_us .strong {
+    position: relative;
+    top: 15%;
+    z-index: 10;
+    height: 45px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    color: #748A9E;
+}
+
+.about_us .bigtitle {
+    position: relative;
+    top: 20%;
+    /*left: -1%;*/
+    margin-top: 25px;
+    font-family: "Source-Han-Ligh48e73877a6908";
+    font-size: 45px;
+    text-align: center;
+}
+
+.about_us p {
+    margin: 23px auto;
+    color: black;
+    font-size: 16px;
+}
+
+/*timeline*/
 .big {
     width: 100%;
     background: #2d2f31;
@@ -224,4 +260,136 @@
     .big .day2 .title {
         font-size: 8px;
     }
+}
+
+/*Photo*/
+.container {
+    margin-top: 50px;
+}
+
+.container .bigtitle {
+    position: relative;
+    top: 20%;
+    /*left: -1%;*/
+    margin-top: 25px;
+    font-family: "Source-Han-Ligh48e73877a6908";
+    font-size: 45px;
+    text-align: center;
+    color: black;
+}
+
+.container p {
+    font-size: 16px;
+}
+
+/*.container .fancybox-picture img {*/
+    /*width:;*/
+    /*height:;*/
+/*}*/
+
+.isotope, .isotope .isotope-item {
+    /* change duration value to whatever you like */
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+}
+
+.isotope-item {
+    margin-right: -1px;
+    font-size: 12px;
+}
+
+.portfolio-item {
+    margin-bottom: 30px;
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+.portfolio-item:hover {
+    margin-bottom: 30px;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.portfolio-item .hover-bg {
+    height: 260px;
+    overflow: hidden;
+    position: relative;
+}
+
+.hover-bg .hover-text {
+    position: absolute;
+    text-align: center;
+    margin: 0 auto;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.66);
+    padding: 25% 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.hover-bg .hover-text > h4 {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    transition: all 0.3s;
+}
+
+.hover-bg:hover .hover-text > h4 {
+    opacity: 1;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.hover-bg .hover-text > i {
+    opacity: 0;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    transition: all 0.3s;
+}
+
+.hover-bg:hover .hover-text > i {
+    opacity: 1;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+}
+
+.hover-bg:hover .hover-text {
+    opacity: 1;
+}
+
+/*footer*/
+footer {
+    text-align: center;
+    height: 105px;
+    background-color: #282828;
+}
+
+footer .ft {
+    margin-top: 148px;
+    width: auto;
+    height: 95px;
+    font-size: 13px;
+    /*padding-top: 15px;*/ /*use it will have margin-bottom!!!*/
+}
+
+footer .p1 {
+    padding-top: 17px;
+}
+
+footer .p2 {
+    padding-top: 11px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #44a8f2;
 }
