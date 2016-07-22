@@ -1,0 +1,52 @@
+html, body, iframe {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft YaHei", Hiragino Sans GB, sans-serif;
+}
+
+#nprogress {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #f7f7f7;
+    z-index: 999;
+}
+
+.spinner-icon {
+    display: none !important;
+}
+
+.splash {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.splash img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    width: 100px;
+}
+
+.card {
+    background-color: #f7f7f7;
+    padding: 20px 25px 15px;
+    margin: 0 auto 25px;
+    width: 380px;
+}
+
+.mybar {
+    background: #29d;
+    height: 10px;
+}
+
+.progress {
+    height: 10px;
+    overflow: hidden;
+}

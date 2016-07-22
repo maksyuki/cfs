@@ -17,8 +17,13 @@
     <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
     <!-- Custom styles for this template -->
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <!-- Add youziku font-->
     <link href='http://cdn.webfont.youziku.com/webfonts/nomal/26888/46865/57877f8df629db0ba0d4a3ec.css' rel='stylesheet'
           type='text/css'/>
+
+    <!-- Add loader -->
+    <link rel="stylesheet" href="css/nprogress.css">
+    <link rel="stylesheet" href="css/loader.css">
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]>
     <!--<script src="scripts/ie8-responsive-file-warning.js"></script><![endif]&ndash;&gt;-->
@@ -30,7 +35,19 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+
 <body>
+<script type="text" id="splash-template">
+    <div class="splash card">
+        <div role="spinner">
+            <div class="spinner-icon"></div>
+        </div>
+        <p class="lead" style="text-align:center">正在加载中，请稍后...</p>
+        <div class="progress">
+            <div class="mybar" role="bar"></div>
+        </div>
+    </div>
+</script>
 <nav class="navbar navbar-default resume">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -68,6 +85,10 @@
 </nav>
 <div id="layout">
     <div class="section section1">
+        <div class="banner" style="text-align: center;">
+            <h1>科技 · 创新 · 人文</h1>
+            <p>华航泽睿致力于提供无人机整体技术解决方案</p>
+        </div>
     </div>
     <div class="section section2">
         <div class="container">
@@ -78,7 +99,7 @@
                     我们致力于为客户提供超出预期的航拍素材，提供极致专业的婚礼艺术航拍服务。形象片拍摄优美清晰，增稳云台，4K超清视频及最高1200万像素的静态照片可以满足你挑剔的眼光。摄影师独到的眼光和构思，地面视频与航拍的完美结合，优秀的后期制作可以带给用户与众不同的体验。
                 </p>
             </div>
-            <div class="row">
+            <div class="row" id="row1">
                 <div class="col-md-2 col-lg-2"></div> <!-- In order to occupy the position -->
                 <div class="col-sm-6 col-md-4 col-lg-4">
                     <div class="thumbnail">
@@ -88,7 +109,7 @@
                             <span class="glyphicon glyphicon-play-circle"></span>
                         </a>
                         <div class="caption">
-                            <h4>大美元墩</h4>
+                            <h4><strong>大美元墩</strong></h4>
                             <p>
                                 汉中盆地是油菜花的天堂。每年花开时节，犹如一片黄色海洋。百万亩同时怒放，天地之间，浮光跃金直把汉中装缀成一只巨大的山水盆景，是中国最秀美的山水风光之一。
                             </p>
@@ -103,7 +124,7 @@
                             <span class="glyphicon glyphicon-play-circle"></span>
                         </a>
                         <div class="caption">
-                            <h4>婚礼艺术航拍</h4>
+                            <h4><strong>婚礼艺术航拍</strong></h4>
                             <p>
                                 一种最初相识的感动，一种情感相知的振颤，所有前行中的色彩斑斓，最终化作人生路上永远的相伴。不一样的视角，体验不一样的婚礼，一生挚爱，永远有你。
                             </p>
@@ -120,7 +141,7 @@
                 <div class="strong">[ 智慧城市 ]</div>
                 <div class="bigtitle" style="color: white;">智能相连，便捷城市生活</div>
             </div>
-            <div class="row">
+            <div class="row" id="row2">
                 <div class="col-sm-6 col-md-3 col-lg-3">
                     <div class="thumbnail">
                         <span class="glyphicon glyphicon-map-marker"></span>
@@ -183,6 +204,8 @@
         </div>
     </div>
     <div class="section section5">
+        <div class="top-cover"></div>
+        <div class="bottom-cover"></div>
         <div class="container">
             <div class="about_us">
                 <div class="strong">[ 关于我们 ]</div>
@@ -194,10 +217,14 @@
             </div>
             <div class="contact_us">
                 <span class="text">联系方式：</span>
-                <span class="icon-weibo"></span>
-                <span class="icon-wechat"></span>
-                <span class="icon-envelop"></span>
-                <span class="icon-phone"></span>
+                <a href="http://weibo.com/hhzrcltd?refer_flag=1001030101_" target="_blank" title="新浪微博"><span
+                        class="icon-weibo"></span></a>
+                <a class="fancybox-picture" href="images/contact_us_weixin_qrcode.jpg" title="腾讯微信"><span
+                        class="icon-wechat"></span></a>
+                <a class="mailbox fancybox-picture" href="images/contact_us_mail.jpg" title="电子邮箱"><span
+                        class="icon-envelop"></span></a>
+                <a class="phone fancybox-picture" href="images/contact_us_phone.jpg" title="移动电话"><span
+                        class="icon-phone"></span></a>
             </div>
         </div>
         <footer>
@@ -214,6 +241,7 @@
         </footer>
     </div>
 </div>
+<span class="glyphicon glyphicon-circle-arrow-up" title="返回顶部"></span>
 </body>
 </html>
 <!-- Bootstrap core JavaScript
@@ -232,5 +260,19 @@
 <!-- before full.js -->
 <script type="text/javascript" src="scripts/jquery.easings.min.js"></script>
 <script type="text/javascript" src="scripts/jquery.fullPage.min.js"></script>
+<!-- Add loader -->
+<script src="scripts/nprogress.js"></script>
+<script type="text/javascript">
+    $(function () {
+        NProgress.configure({
+            template: $('#splash-template').html()
+        });
+        NProgress.start();
+    });
+    $(window).load(function () {
+        NProgress.done();
+    })
+</script>
 <!-- Add index -->
 <script type="text/javascript" src="scripts/index.js"></script>
+
