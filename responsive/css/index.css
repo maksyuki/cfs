@@ -65,11 +65,11 @@
 .resume .navbar-header > a,
 .resume .navbar-nav > li > a {
     color: white;
-    transition: all 2s;
+    /*transition: all 2s;*/
 }
 
-.resume .nav > li > a:hover {
-    transition: all 0s;
+.resume .navbar-nav > li > a:hover {
+    /*transition: all 0s;*/
     color: #44a8f2 !important;
 }
 
