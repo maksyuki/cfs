@@ -95,7 +95,7 @@ function showFullPage() {
         },
         afterLoad: function (anchorLink, index) {
             if (index == 5) {
-                $(".top-cover").css({"height": "16%"});
+                $(".top-cover").css({"height": "10%"});
                 $(".bottom-cover").css({"height": "16%"});
             } else {
                 $(".top-cover").css({"height": "60%"});
