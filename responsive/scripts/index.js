@@ -8,7 +8,7 @@ function showMedia() {
     $(".fancybox-media").fancybox({
         padding: 0,
         openEffect: "none",
-        closeEffect: "'none",
+        closeEffect: "none",
         prevEffect: "none",
         nextEffect: "none",
         arrows: false
@@ -22,8 +22,9 @@ function returnTop() {
 }
 
 function changeSwitchTab(index) {
+    switch_tab = $(".section4 .switch-tab li a");
     for (var i = 0; i < switch_tab.length; i++) {
-        if ($(switch_tab[i]).css("border-bottom") == "2px solid rgb(68, 168, 242)") {
+        if ($(switch_tab[i]).css("border-bottom-color") == "rgb(68, 168, 242)") {
             $(switch_tab[i]).css({"border-bottom": "0 solid #44a8f2"});
             $(switch_tab[index]).css({"border-bottom": "2px solid #44a8f2"});
             if (index == 0) {
@@ -47,9 +48,9 @@ function changeSwitchTab(index) {
 }
 
 function clickSwitchTab() {
-    switch_tab = $(".section4 .switch-tab li a");
+
     $("#protag1").click(function () {
-        changeSwitchTab(0)
+        changeSwitchTab(0);
     });
     $("#protag2").click(function () {
         changeSwitchTab(1)
