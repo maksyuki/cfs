@@ -173,6 +173,10 @@
 }
 
 /*section3*/
+.section3 .container {
+    margin-top: -7% !important;
+}
+
 .section3 #row2 {
     margin-top: 110px !important;
     opacity: 0 !important;
@@ -201,6 +205,10 @@
     display: table !important;
     width: auto !important;
     margin: 0 auto !important;
+}
+
+.section4 .container {
+    margin-top: -10% !important;
 }
 
 .section4 #row3 {
@@ -233,7 +241,7 @@
     position: fixed;
     left: 0;
     right: 0;
-    margin: 50px 0 0 0;
+    margin: 120px 0 0 0;
     z-index: 10;
     opacity: 0;
     transition: all 1s;
