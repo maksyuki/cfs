@@ -2,6 +2,35 @@ $(document).ready(showMedia);
 $(document).ready(returnTop);
 $(document).ready(clickSwitchTab);
 $(document).ready(showFullPage);
+$(document).ready(changeVideoFrameSize);
+$(window).resize(changeVideoFrameSize);
+
+function changeVideoFrameSize() {
+    var tmpwidth = $(window).width(); //浏览器当前窗口可视区域宽度
+    var tmpheight = $(window).height(); //浏览器当前窗口可视区域高度
+
+    answidth = tmpwidth * 0.5865;
+    ansheight = tmpheight * 0.8810;
+    answidth = Math.ceil(answidth);
+    ansheight = Math.ceil(ansheight);
+    // alert(answidth);
+    // alert(ansheight);
+
+    var videoplayer = $("#a1");
+    $(videoplayer).css({"width": answidth + "px"});
+    $(videoplayer).css({"height": ansheight + "px"});
+
+
+    // alert($(videoplayer).css("width"));
+    // alert($(videoplayer).css("height"));
+    // alert($(document).width());//浏览器当前窗口文档对象宽度
+    // alert($(document.body).width());//浏览器当前窗口文档body的宽度
+    // alert($(document.body).outerWidth(true));//浏览器当前窗口文档body的总宽度 包括border padding margin
+
+    // alert($(document).height()); //浏览器当前窗口文档的高度
+    // alert($(document.body).height());//浏览器当前窗口文档body的高度
+    // alert($(document.body).outerHeight(true));//浏览器当前窗口文档body的总高度 包括border padding margin
+}
 
 function showMedia() {
     $(".fancybox-picture").fancybox();
@@ -12,6 +41,29 @@ function showMedia() {
         prevEffect: "none",
         nextEffect: "none",
         arrows: false
+    });
+    $("#showdiv1").fancybox({
+        padding: 0,
+        openEffect: "none",
+        closeEffect: "none",
+        "onClosed": function () {
+            window.document.location.reload(true)
+        },
+        centerOnScroll: true,
+        afterLoad: function () {
+            var browertype = CKobject.browser()['B'];
+            if (browertype == "IE") {
+                var testa = $(".fancybox-inner");
+                // alert("fancybox-inner-width" + $(testa).css("width"));
+                // alert("fancybox-inner-height" + $(testa).css("height"));
+                // alert(answidth + 20);
+                // alert(ansheight + 20);
+                $(testa).css({"width": answidth + 20 + "px"});
+                $(testa).css({"height": ansheight + 20 + "px"});
+                alert("fancybox-inner-width" + $(testa).css("width"));
+                alert("fancybox-inner-height" + $(testa).css("height"));
+            }
+        }
     });
 }
 
