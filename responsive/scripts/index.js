@@ -20,6 +20,9 @@ function changeVideoFrameSize() {
     $(videoplayer).css({"width": answidth + "px"});
     $(videoplayer).css({"height": ansheight + "px"});
 
+    videoplayer = $("#a2");
+    $(videoplayer).css({"width": answidth + "px"});
+    $(videoplayer).css({"height": ansheight + "px"});
 
     // alert($(videoplayer).css("width"));
     // alert($(videoplayer).css("height"));
@@ -49,21 +52,36 @@ function showMedia() {
         "onClosed": function () {
             window.document.location.reload(true)
         },
-        centerOnScroll: true,
-        afterLoad: function () {
-            var browertype = CKobject.browser()['B'];
-            if (browertype == "IE") {
-                var testa = $(".fancybox-inner");
-                // alert("fancybox-inner-width" + $(testa).css("width"));
-                // alert("fancybox-inner-height" + $(testa).css("height"));
-                // alert(answidth + 20);
-                // alert(ansheight + 20);
-                $(testa).css({"width": answidth + 20 + "px"});
-                $(testa).css({"height": ansheight + 20 + "px"});
-                alert("fancybox-inner-width" + $(testa).css("width"));
-                alert("fancybox-inner-height" + $(testa).css("height"));
-            }
-        }
+        centerOnScroll: true
+        // afterLoad: function () {
+        //     var browertype = CKobject.browser()['B'];
+        //     if (browertype == "IE") {
+        //         testa = $(".fancybox-inner");
+        //         // alert("fancybox-inner-width" + $(testa).css("width"));
+        //         // alert("fancybox-inner-height" + $(testa).css("height"));
+        //         // alert(answidth + 20);
+        //         // alert(ansheight + 20);
+        //         $(testa).css({"width": answidth + 20 + "px"});
+        //         $(testa).css({"height": ansheight + 20 + "px"});
+        //
+        //         if ($(testa).css("width") == "802px")
+        //             alert("this is unchange");
+        //         else
+        //             alert("this is changing");
+        //         //alert("fancybox-inner-width" + $(testa).css("width"));
+        //         //alert("fancybox-inner-height" + $(testa).css("height"));
+        //     }
+        // }
+    });
+
+    $("#showdiv2").fancybox({
+        padding: 0,
+        openEffect: "none",
+        closeEffect: "none",
+        "onClosed": function () {
+            window.document.location.reload(true)
+        },
+        centerOnScroll: true
     });
 }
 
