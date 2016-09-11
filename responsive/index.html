@@ -336,12 +336,12 @@
 <script type="text/javascript">
     //如果你不需要某项设置，可以直接删除，注意var flashvars的最后一个值后面不能有逗号
     var flashvars = {
-        f: 'video/cfs_landscape.mp4',//视频地址
+        f: 'video/cfs_landscape.f4v',//视频地址
         a: '',//调用时的参数，只有当s>0的时候有效
         s: '0',//调用方式，0=普通方法（f=视频地址），1=网址形式,2=xml形式，3=swf形式(s>0时f=网址，配合a来完成对地址的组装)
         c: '0',//是否读取文本配置,0不是，1是
         x: '',//调用配置文件路径，只有在c=1时使用。默认为空调用的是ckplayer.xml
-        i: 'images/rape.jpg',//初始图片地址
+        i: '',//初始图片地址
         d: '',//暂停时播放的广告，swf/图片,多个用竖线隔开，图片要加链接地址，没有的时候留空就行
         u: '',//暂停时如果是图片的话，加个链接地址
         l: '',//前置广告，swf/图片/视频，多个用竖线隔开，图片和视频要加链接地址
@@ -372,16 +372,16 @@
     };
 
     var params = {bgcolor: '#FFF', allowFullScreen: true, allowScriptAccess: 'always'};//这里定义播放器的其它参数如背景色（跟flashvars中的b不同），是否支持全屏，是否支持交互
-    var video1 = ['video/cfs_landscape->video/mp4'];
+    var video1 = ['video/cfs_landscape.mp4->video/mp4'];
     CKobject.embed('ckplayer/ckplayer.swf', 'a1', 'ckplayer_a1', '100%', '100%', false, flashvars, video1, params);
 
     flashvars = {
-        f: 'video/cfs_wedding.mp4',//视频地址
+        f: 'video/cfs_wedding.f4v',//视频地址
         a: '',//调用时的参数，只有当s>0的时候有效
         s: '0',//调用方式，0=普通方法（f=视频地址），1=网址形式,2=xml形式，3=swf形式(s>0时f=网址，配合a来完成对地址的组装)
         c: '0',//是否读取文本配置,0不是，1是
         x: '',//调用配置文件路径，只有在c=1时使用。默认为空调用的是ckplayer.xml
-        i: 'images/wedding.jpg',//初始图片地址
+        i: '',//初始图片地址
         d: '',//暂停时播放的广告，swf/图片,多个用竖线隔开，图片要加链接地址，没有的时候留空就行
         u: '',//暂停时如果是图片的话，加个链接地址
         l: '',//前置广告，swf/图片/视频，多个用竖线隔开，图片和视频要加链接地址
@@ -411,11 +411,8 @@
         //调用自定义播放器参数结束
     };
 
-    var video2 = ['video/cfs_wedding->video/mp4'];
+    var video2 = ['video/cfs_wedding.mp4->video/mp4'];
     CKobject.embed('ckplayer/ckplayer.swf', 'a2', 'ckplayer_a1', '100%', '100%', false, flashvars, video2, params);
-    /*
-     以上代码演示的兼容flash和html5环境的。如果只调用flash播放器或只调用html5请看其它示例
-     */
 
 //    function loadedHandler() {
 //        var browertype = CKobject.browser()['B'];
@@ -436,29 +433,6 @@
 //            //alert("fancybox-inner-height" + $(testa).css("height"));
 //        }
 //    }
-
-    //开关灯
-    var box = new LightBox();
-    function closelights() {//关灯
-        box.Show();
-        CKobject._K_('a1').style.width = '940px';
-        CKobject._K_('a1').style.height = '550px';
-        CKobject.getObjectById('ckplayer_a1').width = 940;
-        CKobject.getObjectById('ckplayer_a1').height = 550;
-    }
-    function openlights() {//开灯
-        box.Close();
-        CKobject._K_('a1').style.width = '600px';
-        CKobject._K_('a1').style.height = '400px';
-        CKobject.getObjectById('ckplayer_a1').width = 600;
-        CKobject.getObjectById('ckplayer_a1').height = 400;
-    }
-    function changePrompt() {
-        CKobject.getObjectById('ckplayer_a1').promptUnload();//卸载掉目前的
-        CKobject.getObjectById('ckplayer_a1').changeFlashvars('{k->10|20|30}{n->重设提示点一|重设提示点二|重设提示点三}');
-        CKobject.getObjectById('ckplayer_a1').promptLoad();//重新加载
-    }
-
 </script>
 <!-- Add index -->
 <script type="text/javascript" src="scripts/index.js"></script>
